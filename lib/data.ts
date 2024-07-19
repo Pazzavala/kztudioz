@@ -39,7 +39,7 @@ import medicina from '@/public/assets/images/dichos/tu_eres_la_medicina.png';
 // Months Collection
 import april from '@/public/assets/images/months/april.png';
 import august from '@/public/assets/images/months/august.png';
-import februrary from '@/public/assets/images/months/february.png';
+import february from '@/public/assets/images/months/february.png';
 import january from '@/public/assets/images/months/january.png';
 import july from '@/public/assets/images/months/july.png';
 import june from '@/public/assets/images/months/june.png';
@@ -47,6 +47,7 @@ import march from '@/public/assets/images/months/march.png';
 import may from '@/public/assets/images/months/may.png';
 import october from '@/public/assets/images/months/october.png';
 import september from '@/public/assets/images/months/september.png';
+import { title } from 'process';
 
 
 export const clownCollection = [
@@ -74,7 +75,7 @@ export const clownCollection = [
         tags:['Clown', 'Red', 'Girl'],
         imageUrl: redClown,
     },
-]
+];
 
 export const darkCollection = [
     {
@@ -114,39 +115,169 @@ export const darkCollection = [
         imageUrl: darkGirl3,
     },
     {
-        title: 'Dark Girl 1',
+        title: 'Dark Girl 4',
         description: '...',
         tags: ['Dark', 'Girl'],
-        imageUrl: darkGirl1,
+        imageUrl: darkGirl4,
     },
     {
-        title: 'Dark Girl 1',
+        title: 'Dark Girl 5',
         description: '...',
         tags: ['Dark', 'Girl'],
-        imageUrl: darkGirl1,
+        imageUrl: darkGirl5,
     },
     {
-        title: 'Dark Girl 1',
+        title: 'Dark Girl 6',
         description: '...',
         tags: ['Dark', 'Girl'],
-        imageUrl: darkGirl1,
+        imageUrl: darkGirl6,
     },
     {
-        title: 'Dark Girl 1',
+        title: 'Dark Girl 7',
         description: '...',
         tags: ['Dark', 'Girl'],
-        imageUrl: darkGirl1,
+        imageUrl: darkGirl7,
     },
     {
-        title: 'Dark Girl 1',
+        title: 'Dark Girl 8',
         description: '...',
         tags: ['Dark', 'Girl'],
-        imageUrl: darkGirl1,
+        imageUrl: darkGirl8,
     },
     {
-        title: 'Dark Girl 1',
+        title: 'Dark Girl 9',
         description: '...',
         tags: ['Dark', 'Girl'],
-        imageUrl: darkGirl1,
+        imageUrl: darkGirl9,
     },
-]
+];
+
+export const dichosCollection = [
+    {
+        title: 'Ahh Perro',
+        description: '...',
+        tags: ['...'],
+        imageUrl: ahPerro,
+    },
+    {
+        title: 'Drink Up Bitch',
+        description: '...',
+        tags: ['...'],
+        imageUrl: drinkUpBitch,
+    },
+    {
+        title: 'El Graduado',
+        description: '...',
+        tags: ['...'],
+        imageUrl: elGraduado,
+    },
+    {
+        title: 'La Graduada',
+        description: '...',
+        tags: ['...'],
+        imageUrl: laGraduada,
+    },
+    {
+        title: `I'm Proud of You`,
+        description: '...',
+        tags: ['...'],
+        imageUrl: imProudOfYou,
+    },
+    {
+        title: 'Karma Is a Blessing',
+        description: '...',
+        tags: ['...'],
+        imageUrl: karma,
+    },
+    {
+        title: 'Keep It Up',
+        description: '...',
+        tags: ['...'],
+        imageUrl: keepItUp,
+    },
+    {
+        title: 'Oilo',
+        description: '...',
+        tags: ['...'],
+        imageUrl: oilo,
+    },
+    {
+        title: 'Ring Ring Bitch',
+        description: '...',
+        tags: ['...'],
+        imageUrl: ringRingBitch,
+    },
+    {
+        title: 'Sí Se Pudo',
+        description: '...',
+        tags: ['...'],
+        imageUrl: siSePudo,
+    },
+    {
+        title: 'Spill the Tea',
+        description: '...',
+        tags: ['...'],
+        imageUrl: spillTheTea,
+    },
+    {
+        title: 'Te Quiero Muncho',
+        description: '...',
+        tags: ['...'],
+        imageUrl: teQuieroMuncho,
+    },
+    {
+        title: 'Traka',
+        description: '...',
+        tags: ['...'],
+        imageUrl: traka,
+    },
+    {
+        title: 'Tú Eres la Medicina',
+        description: '...',
+        tags: ['...'],
+        imageUrl: medicina,
+    },
+];
+
+export const monthsCollection = [
+    {
+        title: 'April',
+        imageUrl: april,
+    },
+    {
+        title: 'August',
+        imageUrl: august,
+    },
+    {
+        title: 'February',
+        imageUrl: february,
+    },
+    {
+        title: 'January',
+        imageUrl: january,
+    },
+    {
+        title: 'July',
+        imageUrl: july,
+    },
+    {
+        title: 'June',
+        imageUrl: june,
+    },
+    {
+        title: 'March',
+        imageUrl: march,
+    },
+    {
+        title: 'May',
+        imageUrl: may,
+    },
+    {
+        title: 'October',
+        imageUrl: october,
+    },
+    {
+        title: 'September',
+        imageUrl: september,
+    },
+];
