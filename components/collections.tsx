@@ -1,5 +1,33 @@
+'use client';
+
 import React from 'react';
+import { Knewave } from 'next/font/google';
+import Collection from './collection';
+import { coverCollection } from '@/lib/data';
+import useSectionInView from '@/lib/hooks';
+const knewave = Knewave({ weight: '400', subsets: ['latin'] });
 
 export default function Collections() {
-    return <section>Collections</section>;
+    const { ref } = useSectionInView('Shop');
+
+    return (
+        <section
+            ref={ref}
+            id='shop'
+            className='my-10 p-4 pb-8 max-w-[50rem] bg-gradient-to-br from-[#E9FAFF] to-[#FFF6F9] scroll-mt-20 '
+        >
+            <h2
+                className={`${knewave.className}  text-3xl mt-4 mb-8 text-[#5278C3]`}
+            >
+                Collections
+            </h2>
+            <div className='flex gap-10'>
+                {coverCollection.map((collection, index) => (
+                    <React.Fragment key={index}>
+                        <Collection {...collection} />
+                    </React.Fragment>
+                ))}
+            </div>
+        </section>
+    );
 }

@@ -67,6 +67,24 @@ export const navLinks = [
     }
 ] as const;
 
+export const coverCollection = [
+    {
+        title: 'Clown Collection', 
+        imageUrl: blueClown,
+    },
+    {
+        title: 'Dark Collection', 
+        imageUrl: darkGirl1,
+    },
+    {
+        title: 'Dichos Collection', 
+        imageUrl: ringRingBitch,
+    },
+    {
+        title: 'Months Collection', 
+        imageUrl: january,
+    },
+] as const;
 
 export const clownCollection = [
     {
@@ -93,7 +111,7 @@ export const clownCollection = [
         tags:['Clown', 'Red', 'Girl'],
         imageUrl: redClown,
     },
-];
+] as const;
 
 export const darkCollection = [
     {
@@ -168,7 +186,7 @@ export const darkCollection = [
         tags: ['Dark', 'Girl'],
         imageUrl: darkGirl9,
     },
-];
+] as const;
 
 export const dichosCollection = [
     {
@@ -255,7 +273,7 @@ export const dichosCollection = [
         tags: ['...'],
         imageUrl: medicina,
     },
-];
+] as const;
 
 export const monthsCollection = [
     {
@@ -318,4 +336,4 @@ export const monthsCollection = [
         tags: ['September'],
         imageUrl: september,
     },
-];
+] as const;

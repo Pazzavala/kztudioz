@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { IoSearch } from 'react-icons/io5';
 import Image from 'next/image';
 
 import { navLinks } from '@/lib/data';
@@ -16,8 +17,19 @@ export default function Header() {
 
     return (
         <header className='z-[999] relative'>
+            {/* <Image
+                src={logo}
+                alt='Kzstudio Logo'
+                width={182}
+                // height={80}
+                quality={95}
+                priority={true}
+                // object-cover will perserve ratio
+                className='hidden sm:block relative -top-40 -left-96'
+            /> */}
+
             <motion.div
-                className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none bg-gray-300 bg-opacity-50 border border-gray-300 border-opacity-40 shadow-lg shadow-black/10 backdrop-blur-sm sm:top-7 sm:h-12 sm:w-[23rem] sm:rounded-full'
+                className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none bg-gray-300 bg-opacity-50 border border-gray-300 border-opacity-40 shadow-lg shadow-black/10 backdrop-blur-sm sm:top-7 sm:h-10 sm:w-[21rem] sm:rounded-full'
                 initial={{ y: 100, x: '-50%', opacity: 0 }}
                 animate={{ y: 0, x: '-50%', opacity: 1 }}
             />
@@ -39,7 +51,7 @@ export default function Header() {
                                     setTimeOfLastClick(Date.now());
                                 }}
                                 className={clsx(
-                                    'flex w-full items-center p-3 justify-center text-gray-800 hover:text-[#5278C3] text-sm sm:text-base transition',
+                                    'flex w-full items-center p-2 justify-center text-gray-800 hover:text-[#5278C3] text-sm sm:text-base transition',
                                     {
                                         'text-[#5278C3]':
                                             activeSection === navLink.name,

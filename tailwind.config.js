@@ -9,7 +9,46 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      textShadow: {
+        'default': '2px 2px 2px rgba(0, 0, 0, 0.4)',
+        'md': '3px 3px 3px rgba(0, 0, 0, 0.4)',
+        'lg': '4px 4px 4px rgba(0, 0, 0, 0.4)',
+
+      },
+      dropShadow: {
+        'custom': '2px 2px 2px rgba(0, 0, 0, 0.4)',
+        'custom-md': '3px 3px 3px rgba(0, 0, 0, 0.4)',
+        'custom-lg': '4px 4px 4px rgba(0, 0, 0, 0.4)',
+      }
+    },
   },
-  plugins: [],
+  variants: {
+    dropShadow: ['responsive', 'hover', 'focus'],
+  },
+  plugins: [
+    function ({ addUtilities }) {
+    const newUtilities = {
+      '.text-shadow': {
+        textShadow: '2px 2px 2px rgba(0, 0, 0, 0.4)',
+      },
+      '.text-shadow-md': {
+        textShadow: '3px 3px 3px rgba(0, 0, 0, 0.4)',
+      },
+      '.text-shadow-lg': {
+        textShadow: '4px 4px 4px rgba(0, 0, 0, 0.4)',
+      },
+      '.drop-shadow-custom': {
+          filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))',
+        },
+        '.drop-shadow-custom-md': {
+          filter: 'drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.4))',
+        },
+        '.drop-shadow-custom-lg': {
+          filter: 'drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.4))',
+        },
+    }
+
+    addUtilities(newUtilities, ['responsive', 'hover'])
+  }],
 }
