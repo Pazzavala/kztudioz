@@ -47,7 +47,25 @@ import march from '@/public/assets/images/months/march.png';
 import may from '@/public/assets/images/months/may.png';
 import october from '@/public/assets/images/months/october.png';
 import september from '@/public/assets/images/months/september.png';
-import { title } from 'process';
+
+export const navLinks = [
+    {
+        name: 'Home',
+        hash: '#home',
+    },
+    {
+        name: 'Shop',
+        hash: '#shop',
+    },
+    {
+        name: 'About',
+        hash: '#about',
+    },
+    {
+        name: 'Contact',
+        hash: '#contact',
+    }
+] as const;
 
 
 export const clownCollection = [
@@ -242,42 +260,62 @@ export const dichosCollection = [
 export const monthsCollection = [
     {
         title: 'April',
+        description: '...',
+        tags: ['April'],
         imageUrl: april,
     },
     {
         title: 'August',
+        description: '...',
+        tags: ['August'],
         imageUrl: august,
     },
     {
         title: 'February',
+        description: '...',
+        tags: ['February'],
         imageUrl: february,
     },
     {
         title: 'January',
+        description: '...',
+        tags: ['January'],
         imageUrl: january,
     },
     {
         title: 'July',
+        description: '...',
+        tags: ['July'],
         imageUrl: july,
     },
     {
         title: 'June',
+        description: '...',
+        tags: ['June'],
         imageUrl: june,
     },
     {
         title: 'March',
+        description: '...',
+        tags: ['March'],
         imageUrl: march,
     },
     {
         title: 'May',
+        description: '...',
+        tags: ['May'],
         imageUrl: may,
     },
     {
         title: 'October',
+        description: '...',
+        tags: ['October'],
         imageUrl: october,
     },
     {
         title: 'September',
+        description: '...',
+        tags: ['September'],
         imageUrl: september,
     },
 ];
