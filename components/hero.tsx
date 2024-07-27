@@ -24,9 +24,9 @@ export default function Hero() {
         <section
             id='home'
             ref={ref}
-            className='max-w-[50rem] my-16 p-4 scroll-mt-96'
+            className='max-w-5xl mb-16 sm:my-24 p-4 scroll-mt-96'
         >
-            {/* <div className='flex items-center gap-96'>
+            <div className='absolute flex items-center top-0'>
                 <Image
                     src={logo}
                     alt='Kzstudio Logo'
@@ -35,18 +35,25 @@ export default function Hero() {
                     quality={95}
                     priority={true}
                     // object-cover will perserve ratio
-                    className='hidden sm:block '
+                    className='hidden sm:block'
                 />
-                <div className='hidden md:block top-7 right-5 h-10 w-52 bg-gray-100 rounded-full'>
+                {/* <div className='hidden md:block h-10 w-52 bg-gray-100 rounded-full'>
                     <IoSearch className='' />
+                </div> */}
+            </div>
+
+            <div className='flex flex-col md:flex-row gap-16 sm:gap-16 lg:gap-20'>
+                <div className='flex flex-col gap-8 text-nowrap justify-center'>
+                    <h1
+                        className={`${knewave.className} text-[#5278C3] font-extrabold text-5xl text-shadow-md leading-snug`}
+                    >
+                        Latest Sticker <br /> Collection
+                    </h1>
+                    <a className='hidden md:flex justify-center items-center w-28 rounded-full bg-[#5278C3] text-white hover:scale-110'>
+                        <p className='px-2 py-2'>Shop Now</p>
+                    </a>
                 </div>
-            </div> */}
-            <div className='flex'>
-                <h1
-                    className={`${knewave.className} text-[#5278C3] font-extrabold text-5xl text-shadow-md`}
-                >
-                    Latest Sticker <br /> Collection
-                </h1>
+
                 {/* {clownCollection.map((clown) => (
                     <Image
                         src={clown.imageUrl}
@@ -54,23 +61,26 @@ export default function Hero() {
                         className='w-36 object-cover'
                     />
                 ))} */}
-                <div className='flex'>
+                <div className='flex justify-center items-start'>
                     <Image
                         src={blackClown}
                         alt='Black Clown'
-                        className='w-32 object-contain blur-[0.75px]'
+                        className='w-28 sm:w-32 object-contain blur-[0.75px]'
                     />
                     <Image
                         src={blueClown}
                         alt='Blue Clown'
-                        className='w-64 object-cover'
+                        className='w-48 sm:w-64 mt-16 object-cover'
                     />
                     <Image
                         src={pinkClown}
                         alt='Pink Clown'
-                        className='w-32 object-contain blur-[0.75px]'
+                        className='w-28 sm:w-32 object-contain blur-[0.75px]'
                     />
                 </div>
+                <a className='md:hidden flex justify-center items-center w-28 rounded-full bg-[#5278C3] text-white hover:scale-110'>
+                    <p className='px-2 py-2'>Shop Now</p>
+                </a>
             </div>
         </section>
     );

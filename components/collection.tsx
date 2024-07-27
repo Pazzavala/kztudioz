@@ -6,8 +6,8 @@ type collectionProps = (typeof coverCollection)[number];
 
 export default function Collection({ title, imageUrl }: collectionProps) {
     return (
-        <article className='flex flex-col gap-y-3 justify-center items-center'>
-            <div className='flex justify-center items-center bg-gradient-to-br from-[#C6EFFF] to-[#D6D0FA] max-w-52 h-full border border-black/5 rounded-xl object-cover'>
+        <article className='flex flex-col gap-y-3 my-3 justify-center items-center'>
+            <div className='flex m-2 justify-center items-center bg-gradient-to-br from-[#C6EFFF] to-[#D6D0FA] max-w-52 h-full border border-black/5 rounded-xl object-cover'>
                 <Image
                     src={imageUrl}
                     alt={title}

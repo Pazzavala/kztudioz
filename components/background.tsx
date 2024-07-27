@@ -13,22 +13,22 @@ export default function Background() {
             <div className='flex-none w-1/4 bg-white'></div>
             <div className='flex-auto flex justify-center items-center'>
                 <div className='px-12 blur-3xl'>
-                    {clownCollection.map((clown, index) => (
+                    {dichosCollection.map((dicho, index) => (
                         <Image
                             key={index}
-                            src={clown.imageUrl}
-                            alt={clown.title}
+                            src={dicho.imageUrl}
+                            alt={dicho.title}
                             width={400}
                             height={400}
                         />
                     ))}
                 </div>
                 <div className='px-12 blur-3xl'>
-                    {dichosCollection.map((dicho, index) => (
+                    {clownCollection.map((clown, index) => (
                         <Image
                             key={index}
-                            src={dicho.imageUrl}
-                            alt={dicho.title}
+                            src={clown.imageUrl}
+                            alt={clown.title}
                             width={400}
                             height={400}
                         />

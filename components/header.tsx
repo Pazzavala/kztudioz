@@ -16,25 +16,14 @@ export default function Header() {
         useActiveSectionContext();
 
     return (
-        <header className='z-[999] relative'>
-            {/* <Image
-                src={logo}
-                alt='Kzstudio Logo'
-                width={182}
-                // height={80}
-                quality={95}
-                priority={true}
-                // object-cover will perserve ratio
-                className='hidden sm:block relative -top-40 -left-96'
-            /> */}
-
+        <header className='z-[999] relative mb-10'>
             <motion.div
-                className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none bg-gray-300 bg-opacity-50 border border-gray-300 border-opacity-40 shadow-lg shadow-black/10 backdrop-blur-sm sm:top-7 sm:h-10 sm:w-[21rem] sm:rounded-full'
+                className='fixed top-0 sm:top-14 left-1/2 h-[4.5rem] sm:h-10 w-full sm:w-[21rem] rounded-none bg-gray-300 bg-opacity-50 border border-gray-300 border-opacity-40 shadow-lg shadow-black/10 backdrop-blur-sm  sm:rounded-full'
                 initial={{ y: 100, x: '-50%', opacity: 0 }}
                 animate={{ y: 0, x: '-50%', opacity: 1 }}
             />
 
-            <nav className='fixed flex top-1 left-1/2 h-12 -translate-x-1/2 py-2 sm:top-7 sm:h-[initial] sm:py-0'>
+            <nav className='fixed flex top-1 left-1/2 h-12 -translate-x-1/2 py-2 sm:top-14 sm:h-[initial] sm:py-0'>
                 <ul className='flex flex-wrap sm:flex-nowrap w-[22rem] sm:w-[initial] items-center justify-center gap-y-1 sm:gap-5'>
                     {navLinks.map((navLink, index) => (
                         <motion.li
