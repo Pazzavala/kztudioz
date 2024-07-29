@@ -26,7 +26,7 @@ export default function Hero() {
             ref={ref}
             className='max-w-5xl mb-16 sm:my-24 p-4 scroll-mt-96'
         >
-            <div className='absolute flex items-center top-0'>
+            {/* <div className='absolute flex items-center top-0'>
                 <Image
                     src={logo}
                     alt='Kzstudio Logo'
@@ -37,10 +37,10 @@ export default function Hero() {
                     // object-cover will perserve ratio
                     className='hidden sm:block'
                 />
-                {/* <div className='hidden md:block h-10 w-52 bg-gray-100 rounded-full'>
+                <div className='hidden md:block h-10 w-52 bg-gray-100 rounded-full'>
                     <IoSearch className='' />
-                </div> */}
-            </div>
+                </div>
+            </div> */}
 
             <div className='flex flex-col md:flex-row gap-16 sm:gap-16 lg:gap-20'>
                 <div className='flex flex-col gap-8 text-nowrap justify-center'>

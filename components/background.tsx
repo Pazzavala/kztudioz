@@ -10,7 +10,7 @@ import { monthsCollection } from '@/lib/data';
 export default function Background() {
     return (
         <div className='absolute -z-10 flex w-full h-full top-16'>
-            <div className='flex-none w-1/4 bg-white'></div>
+            <div className='flex-none w-1/4 bg-white' />
             <div className='flex-auto flex justify-center items-center'>
                 <div className='px-12 blur-3xl'>
                     {dichosCollection.map((dicho, index) => (
@@ -35,7 +35,7 @@ export default function Background() {
                     ))}
                 </div>
             </div>
-            <div className='flex-none w-1/4 bg-white'></div>
+            <div className='flex-none w-1/4 bg-white' />
         </div>
     );
 }

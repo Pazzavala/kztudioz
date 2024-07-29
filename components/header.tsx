@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import clsx from 'clsx';
@@ -15,55 +15,104 @@ export default function Header() {
     const { activeSection, setActiveSection, setTimeOfLastClick } =
         useActiveSectionContext();
 
-    return (
-        <header className='z-[999] relative mb-10'>
-            <motion.div
-                className='fixed top-0 sm:top-14 left-1/2 h-[4.5rem] sm:h-10 w-full sm:w-[21rem] rounded-none bg-gray-300 bg-opacity-50 border border-gray-300 border-opacity-40 shadow-lg shadow-black/10 backdrop-blur-sm  sm:rounded-full'
-                initial={{ y: 100, x: '-50%', opacity: 0 }}
-                animate={{ y: 0, x: '-50%', opacity: 1 }}
-            />
+    const [searchQuery, setSearchQuery] = useState('');
 
-            <nav className='fixed flex top-1 left-1/2 h-12 -translate-x-1/2 py-2 sm:top-14 sm:h-[initial] sm:py-0'>
-                <ul className='flex flex-wrap sm:flex-nowrap w-[22rem] sm:w-[initial] items-center justify-center gap-y-1 sm:gap-5'>
-                    {navLinks.map((navLink, index) => (
-                        <motion.li
-                            key={index}
-                            initial={{ y: -100, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            className='relative flex h-3/4 items-center justify-center'
-                        >
-                            {' '}
-                            <Link
-                                href={navLink.hash}
-                                onClick={() => {
-                                    setActiveSection(navLink.name);
-                                    setTimeOfLastClick(Date.now());
-                                }}
-                                className={clsx(
-                                    'flex w-full items-center p-2 justify-center text-gray-800 hover:text-[#5278C3] text-sm sm:text-base transition',
-                                    {
-                                        'text-[#5278C3]':
-                                            activeSection === navLink.name,
-                                    }
-                                )}
+    const handleSearchChange = (s: any) => {
+        setSearchQuery(s.target.value);
+    };
+
+    const handleSearchSubmit = (s: any) => {
+        s.preventDefault();
+    };
+
+    return (
+        <header className='flex px-16 sm:-mt-[7.2rem] max-w-5xl mx-auto justify-between items-center'>
+            <motion.div
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                className='hidden md:flex items-center'
+            >
+                <Image
+                    src={logo}
+                    alt='Kzstudio Logo'
+                    width={120}
+                    // height={80}
+                    quality={95}
+                    priority={true}
+                    // object-cover will perserve ratio
+                />
+            </motion.div>
+            <div className='z-[999] relative'>
+                <motion.div
+                    className='fixed top-0 sm:top-14 left-1/2 h-[4.5rem] sm:h-10 w-full sm:w-[21rem] rounded-none bg-gray-300 bg-opacity-50 border border-gray-300 border-opacity-40 shadow-lg shadow-black/10 backdrop-blur-sm  sm:rounded-full'
+                    initial={{ y: 100, x: '-50%', opacity: 0 }}
+                    animate={{ y: 0, x: '-50%', opacity: 1 }}
+                />
+
+                <nav className='fixed flex top-1 left-1/2 h-12 -translate-x-1/2 py-2 sm:top-14 sm:h-[initial] sm:py-0'>
+                    <ul className='flex flex-wrap sm:flex-nowrap w-[22rem] sm:w-[initial] items-center justify-center gap-y-1 sm:gap-5'>
+                        {navLinks.map((navLink, index) => (
+                            <motion.li
+                                key={index}
+                                initial={{ y: -100, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                className='relative flex h-3/4 items-center justify-center'
                             >
-                                {navLink.name}
-                                {navLink.name === activeSection && (
-                                    <motion.span
-                                        layoutId='activeSection'
-                                        transition={{
-                                            type: 'spring',
-                                            stiffness: 380,
-                                            damping: 30,
-                                        }}
-                                        className='absolute bg-white rounded-full inset-0 -z-10 text-[#5278C3]'
-                                    />
-                                )}
-                            </Link>
-                        </motion.li>
-                    ))}
-                </ul>
-            </nav>
+                                {' '}
+                                <Link
+                                    href={navLink.hash}
+                                    onClick={() => {
+                                        setActiveSection(navLink.name);
+                                        setTimeOfLastClick(Date.now());
+                                    }}
+                                    className={clsx(
+                                        'flex w-full items-center p-2 justify-center text-gray-800 hover:text-[#5278C3] text-sm sm:text-base transition',
+                                        {
+                                            'text-[#5278C3]':
+                                                activeSection === navLink.name,
+                                        }
+                                    )}
+                                >
+                                    {navLink.name}
+                                    {navLink.name === activeSection && (
+                                        <motion.span
+                                            layoutId='activeSection'
+                                            transition={{
+                                                type: 'spring',
+                                                stiffness: 380,
+                                                damping: 30,
+                                            }}
+                                            className='absolute bg-white rounded-full inset-0 -z-10 text-[#5278C3]'
+                                        />
+                                    )}
+                                </Link>
+                            </motion.li>
+                        ))}
+                    </ul>
+                </nav>
+            </div>
+
+            <motion.div
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                className='hidden md:flex h-10 items-center'
+            >
+                <form className='flex items-center'>
+                    <input
+                        onInput={handleSearchChange}
+                        type='text'
+                        placeholder='Search...'
+                        className='h-8 px-2 py-1 w-36 md:w-32 rounded-l-full text-sm focus:outline-none bg-gray-300 bg-opacity-50 border border-gray-300 border-opacity-40'
+                    />
+                    <button
+                        onClick={handleSearchSubmit}
+                        type='submit'
+                        className='h-8 px-2 py-1 rounded-r-full bg-gray-300 hover:bg-[#5278C3] bg-opacity-50 border border-gray-300 border-opacity-40 text-[#5278C] hover:text-white transition'
+                    >
+                        <IoSearch />
+                    </button>
+                </form>
+            </motion.div>
         </header>
     );
 }
