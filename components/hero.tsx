@@ -27,7 +27,7 @@ export default function Hero() {
             <div className='flex flex-col md:flex-row gap-7 sm:gap-16 lg:gap-20'>
                 <div className='flex flex-col sm:gap-8 text-nowrap justify-center'>
                     <h1
-                        className={`${knewave.className} mb-28 text-center sm:text-start text-[#5278C3] font-extrabold text-5xl text-shadow-md leading-snug`}
+                        className={`${knewave.className} md:mb-28 text-center sm:text-start text-[#5278C3] font-extrabold text-5xl text-shadow-md leading-snug`}
                     >
                         Latest Sticker <br /> Collection
                     </h1>

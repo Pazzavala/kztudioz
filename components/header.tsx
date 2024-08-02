@@ -26,7 +26,7 @@ export default function Header() {
     };
 
     return (
-        <header className='flex px-16 md:-mt-[7.5rem] max-w-5xl mx-auto justify-between items-center'>
+        <header className='flex px-16 md:-mt-[7.25rem] max-w-5xl mx-auto justify-between items-center'>
             <motion.div
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -40,7 +40,7 @@ export default function Header() {
                     quality={95}
                     priority={true}
                     // object-cover will perserve ratio
-                    className='fixed -top-3 -ml-12 md:static w-[4.5rem] md:w-44'
+                    className='fixed -top-2 -ml-14 md:static w-[4rem] md:w-44'
                 />
             </motion.div>
             <div className='z-[999] relative'>
