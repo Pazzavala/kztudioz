@@ -49,10 +49,10 @@ import october from '@/public/assets/images/months/october.png';
 import september from '@/public/assets/images/months/september.png';
 
 export const navLinks = [
-    {
-        name: 'Home',
-        hash: '#home',
-    },
+    // {
+    //     name: 'Home',
+    //     hash: '#home',
+    // },
     {
         name: 'Shop',
         hash: '#shop',

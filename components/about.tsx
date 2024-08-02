@@ -20,7 +20,7 @@ export default function About() {
                 width={300}
                 className='-mt-10 sm:mt-0'
             />
-            <div className='max-w-lg'>
+            <div className='max-w-lg text-center'>
                 <h3 className='mb-4 font-bold text-xl sm:text-3xl text-[#5278C3]'>
                     Hello and welcome to our company!
                 </h3>
@@ -29,8 +29,9 @@ export default function About() {
                     <span className=''>hand-drawn</span> stickers that add a
                     personal touch to anything you stick them on. Crafted with
                     love and care, our stickers are shipped within the US to
-                    ensure they reach you quickly and in perfect condition. Let
-                    our art bring a smile to your day!
+                    ensure they reach you quickly and in perfect condition.{' '}
+                    <br />
+                    Let our art bring a smile to your day!
                 </p>
                 {/* <h3 className='mb-4 font-bold text-2xl text-[#5278C3]'>
                     {' '}
