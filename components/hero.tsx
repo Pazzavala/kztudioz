@@ -16,12 +16,12 @@ import useSectionInView from '@/lib/hooks';
 const knewave = Knewave({ weight: '400', subsets: ['latin'] });
 
 export default function Hero() {
-    // const { ref } = useSectionInView('Home', 0.5);
+    const { ref } = useSectionInView('Home', 0.5);
 
     return (
         <section
-            // id='home'
-            // ref={ref}
+            id='home'
+            ref={ref}
             className='max-w-5xl -mt-16 sm:mt-0 mb-16 sm:my-24 p-4 scroll-mt-96'
         >
             <div className='flex flex-col md:flex-row gap-7 sm:gap-16 lg:gap-20'>
