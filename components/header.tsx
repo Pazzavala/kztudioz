@@ -26,11 +26,11 @@ export default function Header() {
     };
 
     return (
-        <header className='flex px-16 md:-mt-[7.25rem] max-w-5xl mx-auto justify-between items-center'>
+        <header className='flex md:-mt-[7.25rem] max-w-[58rem] mx-auto justify-between items-center'>
             <motion.div
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className='realtive z-[9999] items-center cursor-pointer'
+                className='realtive md:static z-[9999] items-center cursor-pointer'
             >
                 <Image
                     src={logo}
@@ -40,7 +40,7 @@ export default function Header() {
                     quality={95}
                     priority={true}
                     // object-cover will perserve ratio
-                    className='fixed -top-2 -ml-14 md:static w-[4rem] md:w-44'
+                    className='fixed ml-1 md:ml-0 -top-2 md:static w-[4rem] md:w-32 drop-shadow-custom-md'
                 />
             </motion.div>
             <div className='z-[999] relative'>
@@ -96,9 +96,9 @@ export default function Header() {
             <motion.div
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className='relative md:flex gap-2 h-10 items-center text-gray-700 z-[9999]'
+                className='relative md:flex gap-2 h-10 items-center text-gray-700 z-[9999]  md:-mt-3'
             >
-                <form className='flex items-center shadow-lg shadow-black/10 rounded-full'>
+                <form className='flex items-center shadow-lg shadow-black/10 rounded-full '>
                     <input
                         onInput={handleSearchChange}
                         type='text'

@@ -14,7 +14,7 @@ export default function Collections() {
         <section
             ref={ref}
             id='shop'
-            className='max-w-6xl sm:my-24 p-4 pb-8 bg-gradient-to-br from-[#E9FAFF] to-[#FFF6F9] scroll-m-16 sm:scroll-mt-48'
+            className='max-w-5xl sm:my-24 p-4 pb-8 bg-gradient-to-br from-[#E9FAFF] to-[#FFF6F9] scroll-mt-16 sm:scroll-mt-48'
         >
             <h2
                 className={`${knewave.className}  text-3xl mt-4 mb-8 text-[#5278C3]`}
