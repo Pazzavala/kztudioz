@@ -17,11 +17,11 @@ export default function Header() {
 
     const [searchQuery, setSearchQuery] = useState('');
 
-    const handleSearchChange = (s) => {
+    const handleSearchChange = (s: any) => {
         setSearchQuery(s.target.value);
     };
 
-    const handleSearchSubmit = (s) => {
+    const handleSearchSubmit = (s: any) => {
         s.preventDefault();
     };
 
