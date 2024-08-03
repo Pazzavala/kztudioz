@@ -67,6 +67,7 @@ export const navLinks = [
     }
 ] as const;
 
+// Probably add some tags, add date they were relased
 export const coverCollection = [
     {
         title: 'Clown Collection', 

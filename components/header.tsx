@@ -10,6 +10,11 @@ import Image from 'next/image';
 import { navLinks } from '@/lib/data';
 import logo from '@/public/assets/logo.png';
 import { useActiveSectionContext } from '@/context/active-section-context';
+import { Inter, Itim, Montserrat } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ['latin'] });
+const itim = Itim({ weight: '400', subsets: ['latin'] });
 
 export default function Header() {
     const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -26,7 +31,7 @@ export default function Header() {
     };
 
     return (
-        <header className='flex max-w-5xl w-full mx-auto px-4 justify-between items-center md:-mt-[7.25rem]'>
+        <header className='flex max-w-[87rem] w-full mx-auto px-4 justify-between items-center md:-mt-[7.25rem]'>
             {/* Logo */}
             <motion.div
                 initial={{ y: -100, opacity: 0 }}
@@ -39,19 +44,21 @@ export default function Header() {
                     width={120}
                     quality={95}
                     priority={true}
-                    className='hidden sm:block fixed ml-1 md:ml-0 -top-2 left-0 md:static w-[4rem] md:w-32 drop-shadow-custom-md'
+                    className='hidden sm:block fixed ml-1 md:ml-0 -top-2 left-0 md:static w-[4rem] md:w-36 drop-shadow-custom-md'
                 />
             </motion.div>
 
             {/* Nav Bar */}
             <div className='relative z-[999]'>
                 <motion.div
-                    className='fixed top-0 md:top-14 left-1/2 h-[4.5rem] md:h-10 w-full md:w-[21rem] rounded-none bg-gray-200 bg-opacity-50 border border-gray-300 border-opacity-40 shadow-lg shadow-black/10 backdrop-blur-md md:rounded-full'
+                    className='fixed top-0 md:top-16 left-1/2 h-[4.5rem] md:h-11 w-full md:w-[23rem] rounded-none bg-gray-200 bg-opacity-50 border border-gray-300 border-opacity-40 shadow-lg shadow-black/10 backdrop-blur-md md:rounded-full'
                     initial={{ y: 100, x: '-50%', opacity: 0 }}
                     animate={{ y: 0, x: '-50%', opacity: 1 }}
                 />
 
-                <nav className='fixed flex top-3 left-1/2 h-12 -translate-x-1/2 py-2 md:top-14 md:h-[initial] md:py-0'>
+                <nav
+                    className={`${inter.className} fixed flex top-3 left-1/2 h-12 -translate-x-1/2 py-2 md:top-16 md:h-[initial] md:py-0`}
+                >
                     <ul className='flex flex-wrap md:flex-nowrap w-[22rem] md:w-[initial] items-center justify-center gap-y-1 sm:gap-5'>
                         {navLinks.map((navLink, index) => (
                             <motion.li
@@ -67,7 +74,7 @@ export default function Header() {
                                         setTimeOfLastClick(Date.now());
                                     }}
                                     className={clsx(
-                                        'flex w-full items-center p-2 justify-center text-gray-800 hover:text-[#5278C3] text-sm sm:text-base transition',
+                                        'flex w-full items-center p-2 justify-center text-gray-800 hover:text-[#5278C3] text-sm sm:text-lg transition',
                                         {
                                             'text-[#5278C3]':
                                                 activeSection === navLink.name,

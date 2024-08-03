@@ -1,9 +1,13 @@
 'use client';
 import Image from 'next/image';
 import React from 'react';
-
 import logo from '@/public/assets/logo.png';
 import useSectionInView from '@/lib/hooks';
+import { Inter, Itim, Montserrat } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ['latin'] });
+const itim = Itim({ weight: '400', subsets: ['latin'] });
 
 export default function About() {
     const { ref } = useSectionInView('About', 0.7);
@@ -24,7 +28,9 @@ export default function About() {
                 <h3 className='mb-4 font-bold text-xl sm:text-3xl text-[#5278C3]'>
                     Hello and welcome to our company!
                 </h3>
-                <p className='mb-28 sm:mb-0 leading-relaxed text-gray-800'>
+                <p
+                    className={`${inter.className} mb-28 sm:mb-0 leading-relaxed text-gray-800`}
+                >
                     We specialize in creating unique,{' '}
                     <span className=''>hand-drawn</span> stickers that add a
                     personal touch to anything you stick them on. Crafted with

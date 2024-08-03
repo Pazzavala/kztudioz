@@ -5,7 +5,11 @@ import { Knewave } from 'next/font/google';
 import Collection from './collection';
 import { coverCollection } from '@/lib/data';
 import useSectionInView from '@/lib/hooks';
-const knewave = Knewave({ weight: '400', subsets: ['latin'] });
+import { Inter, Itim, Montserrat } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ['latin'] });
+const itim = Itim({ weight: '400', subsets: ['latin'] });
 
 export default function Collections() {
     const { ref } = useSectionInView('Shop', 0.3);
@@ -14,19 +18,22 @@ export default function Collections() {
         <section
             ref={ref}
             id='shop'
-            className='max-w-5xl w-full sm:my-24 p-4 pb-8 bg-gradient-to-br from-[#E9FAFF] to-[#FFF6F9] scroll-mt-16 sm:scroll-mt-48'
+            className='flex w-full justify-center bg-gradient-to-br from-[#E9FAFF] to-[#FFF6F9] scroll-mt-16 sm:scroll-mt-48'
         >
-            <h2
-                className={`${knewave.className} text-5xl text-center sm:text-start mt-4 mb-8 text-[#5278C3]`}
-            >
-                Collections
-            </h2>
-            <div className='flex flex-col sm:flex-row justify-center'>
-                {coverCollection.map((collection, index) => (
-                    <React.Fragment key={index}>
-                        <Collection {...collection} />
-                    </React.Fragment>
-                ))}
+            <div className='max-w-7xl w-full sm:my-8 p-4 pb-8 bg-gradient-to-br from-[#E9FAFF] to-[#FFF6F9] scroll-mt-16 sm:scroll-mt-48'>
+                <h2
+                    className={` text-4xl sm:text-7xl text-center mt-4 mb-8 text-[#5278C3]`}
+                >
+                    Collections
+                </h2>
+
+                <div className='flex flex-col justify-center'>
+                    {coverCollection.map((collection, index) => (
+                        <React.Fragment key={index}>
+                            <Collection {...collection} />
+                        </React.Fragment>
+                    ))}
+                </div>
             </div>
         </section>
     );

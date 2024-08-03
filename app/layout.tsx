@@ -1,13 +1,36 @@
 import type { Metadata } from 'next';
-import { Knewave, Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Background from '@/components/background';
 import ActiveSectionContextProvider from '@/context/active-section-context';
+import {
+    Inter,
+    Montserrat,
+    Calistoga,
+    Permanent_Marker,
+    Luckiest_Guy,
+    Itim,
+    Molle,
+    Sedgwick_Ave_Display,
+    Signika,
+} from 'next/font/google';
 
-const knewave = Knewave({ weight: '400', subsets: ['latin'] });
 const inter = Inter({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ['latin'] });
+const itim = Itim({ weight: '400', subsets: ['latin'] });
+const calistoga = Calistoga({ weight: '400', subsets: ['latin'] });
+const permanent_Marker = Permanent_Marker({
+    weight: '400',
+    subsets: ['latin'],
+});
+const luckiest_Guy = Luckiest_Guy({ weight: '400', subsets: ['latin'] });
+const molle = Molle({ weight: '400', subsets: ['latin'] });
+const signika = Signika({ weight: '400', subsets: ['latin'] });
+const sedgwick_Ave_Display = Sedgwick_Ave_Display({
+    weight: '400',
+    subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
     title: "Karla's | Kztudioz Webpage",
@@ -22,7 +45,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body className={`${inter.className} relative text-gray-950 pt-28`}>
+            <body className={`${molle.className} relative text-gray-950 pt-28`}>
                 <Background />
                 <ActiveSectionContextProvider>
                     <Header />
