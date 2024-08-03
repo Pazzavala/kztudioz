@@ -8,7 +8,7 @@ import useSectionInView from '@/lib/hooks';
 const knewave = Knewave({ weight: '400', subsets: ['latin'] });
 
 export default function Collections() {
-    const { ref } = useSectionInView('Shop', 0.7);
+    const { ref } = useSectionInView('Shop', 0.3);
 
     return (
         <section
@@ -17,7 +17,7 @@ export default function Collections() {
             className='max-w-5xl w-full sm:my-24 p-4 pb-8 bg-gradient-to-br from-[#E9FAFF] to-[#FFF6F9] scroll-mt-16 sm:scroll-mt-48'
         >
             <h2
-                className={`${knewave.className} text-3xl mt-4 mb-8 text-[#5278C3]`}
+                className={`${knewave.className} text-5xl text-center sm:text-start mt-4 mb-8 text-[#5278C3]`}
             >
                 Collections
             </h2>
