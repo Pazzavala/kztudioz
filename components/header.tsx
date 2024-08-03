@@ -17,40 +17,41 @@ export default function Header() {
 
     const [searchQuery, setSearchQuery] = useState('');
 
-    const handleSearchChange = (s: any) => {
+    const handleSearchChange = (s) => {
         setSearchQuery(s.target.value);
     };
 
-    const handleSearchSubmit = (s: any) => {
+    const handleSearchSubmit = (s) => {
         s.preventDefault();
     };
 
     return (
-        <header className='flex md:-mt-[7.25rem] max-w-[58rem] mx-auto justify-between items-center'>
+        <header className='flex max-w-5xl w-full mx-auto px-4 justify-between items-center md:-mt-[7.25rem]'>
+            {/* Logo */}
             <motion.div
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className='realtive md:static z-[9999] items-center cursor-pointer'
+                className='relative md:static z-[9999] items-center cursor-pointer'
             >
                 <Image
                     src={logo}
                     alt='Kzstudio Logo'
                     width={120}
-                    // height={80}
                     quality={95}
                     priority={true}
-                    // object-cover will perserve ratio
-                    className='fixed ml-1 md:ml-0 -top-2 md:static w-[4rem] md:w-32 drop-shadow-custom-md'
+                    className='hidden sm:block fixed ml-1 md:ml-0 -top-2 left-0 md:static w-[4rem] md:w-32 drop-shadow-custom-md'
                 />
             </motion.div>
-            <div className='z-[999] relative'>
+
+            {/* Nav Bar */}
+            <div className='relative z-[999]'>
                 <motion.div
-                    className='fixed top-0 md:top-14 left-[48.5%] h-[4.5rem] md:h-10 w-full md:w-[21rem] rounded-none bg-gray-200 bg-opacity-50 border border-gray-300 border-opacity-40 shadow-lg shadow-black/10 backdrop-blur-md  md:rounded-full'
+                    className='fixed top-0 md:top-14 left-1/2 h-[4.5rem] md:h-10 w-full md:w-[21rem] rounded-none bg-gray-200 bg-opacity-50 border border-gray-300 border-opacity-40 shadow-lg shadow-black/10 backdrop-blur-md md:rounded-full'
                     initial={{ y: 100, x: '-50%', opacity: 0 }}
                     animate={{ y: 0, x: '-50%', opacity: 1 }}
                 />
 
-                <nav className='fixed flex top-3 left-[48.5%] h-12 -translate-x-1/2 py-2 md:top-14 md:h-[initial] md:py-0'>
+                <nav className='fixed flex top-3 left-1/2 h-12 -translate-x-1/2 py-2 md:top-14 md:h-[initial] md:py-0'>
                     <ul className='flex flex-wrap md:flex-nowrap w-[22rem] md:w-[initial] items-center justify-center gap-y-1 sm:gap-5'>
                         {navLinks.map((navLink, index) => (
                             <motion.li
@@ -59,7 +60,6 @@ export default function Header() {
                                 animate={{ y: 0, opacity: 1 }}
                                 className='relative flex h-3/4 items-center justify-center'
                             >
-                                {' '}
                                 <Link
                                     href={navLink.hash}
                                     onClick={() => {
@@ -93,10 +93,11 @@ export default function Header() {
                 </nav>
             </div>
 
+            {/* Search Bar and cart */}
             <motion.div
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className='relative md:flex gap-2 h-10 items-center text-gray-700 z-[9999]  md:-mt-3'
+                className='relative md:flex gap-2 h-10 items-center text-gray-700 z-[9999] md:-mt-3'
             >
                 <form className='flex items-center shadow-lg shadow-black/10 rounded-full '>
                     <input
@@ -108,12 +109,12 @@ export default function Header() {
                     <button
                         onClick={handleSearchSubmit}
                         type='submit'
-                        className='fixed md:static top-5 right-12 h-8 px-2 py-1 rounded-full md:rounded-none md:rounded-r-full md:bg-gray-200 md:hover:bg-[#5278C3] md:bg-opacity-50 md:border border-gray-300 border-opacity-40 md:backdrop-blur-md text-[#5278C] hover:text-white transition'
+                        className='fixed md:static top-5 right-1 h-8 px-2 py-1 rounded-full md:rounded-none md:rounded-r-full md:bg-gray-200 md:hover:bg-[#5278C3] md:bg-opacity-50 md:border border-gray-300 border-opacity-40 md:backdrop-blur-md text-[#5278C] hover:text-white transition'
                     >
                         <IoSearch className='text-lg' />
                     </button>
                 </form>
-                <button className='fixed md:static top-5 right-4 h-8 px-2 py-1 rounded-full md:bg-gray-200 md:hover:bg-[#5278C3] md:bg-opacity-50 md:border border-gray-300 border-opacity-40 md:shadow-lg shadow-black/10 md:backdrop-blur-md text-[#5278C] hover:text-white transition'>
+                <button className='fixed md:static top-5 right-8 h-8 px-2 py-1 rounded-full md:bg-gray-200 md:hover:bg-[#5278C3] md:bg-opacity-50 md:border border-gray-300 border-opacity-40 md:shadow-lg shadow-black/10 md:backdrop-blur-md text-[#5278C] hover:text-white transition'>
                     <IoCart className='text-lg' />
                 </button>
             </motion.div>

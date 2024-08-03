@@ -22,60 +22,55 @@ export default function Hero() {
         <section
             id='home'
             ref={ref}
-            className='max-w-[58rem] -mt-16 sm:mt-10 mb-16 sm:my-24 p-4 scroll-mt-96'
+            className='max-w-5xl w-full mx-auto -mt-20 sm:mt-10 mb-16 sm:my-24 p-4 scroll-mt-96'
         >
-            <div className='flex flex-col md:flex-row gap-7 sm:gap-16 lg:gap-20'>
-                <div className='flex flex-col sm:gap-8 text-nowrap justify-center'>
+            <div className=' flex flex-col md:flex-row gap-7 sm:gap-16 items-center justify-center'>
+                <div className='flex flex-col sm:gap-8 text-center md:text-left justify-center'>
                     <h1
-                        className={`${knewave.className} sm:mb-5 text-center sm:text-start text-[#5278C3] font-extrabold text-5xl text-shadow-md leading-normal`}
+                        className={`${knewave.className} sm:mb-5 text-[#5278C3] font-extrabold text-5xl leading-normal`}
                     >
                         Latest Sticker <br /> Collection
                     </h1>
-                    <p className='hidden sm:block text-wrap md:mb-5 max-w-96 text-gray-700'>
+                    <p className='hidden sm:block md:mb-5 max-w-96 text-gray-700'>
                         Introducing our vibrant new sticker collection featuring
                         a variety of artistic clowns, perfect for adding a touch
                         of color and fun to any surface!
                     </p>
-                    <div className='flex gap-5'>
-                        <a className='hidden md:flex mt-3 justify-center items-center w-48 rounded-full text-base bg-[#5278C3] text-white shadow-lg shadow-black/10 hover:scale-110'>
-                            <p className='px-3 py-3'>View Latest Collection</p>
+                    <div className='hidden md:flex gap-5'>
+                        <a className='flex text-center justify-center items-center w-full text-nowrap rounded-full text-base bg-[#5278C3] text-white shadow-lg hover:scale-110 transition-transform'>
+                            <p className='p-2 lg:p-3'>View Latest Collection</p>
                         </a>
-                        <a className='hidden md:flex mt-3 justify-center items-center w-48 rounded-full text-base border border-[#5278C3] text-[#5278C3] shadow-lg shadow-black/10 hover:scale-110'>
-                            <p className='px-3 py-3'>All Sticker Collections</p>
+                        <a className='flex text-center justify-center items-center w-full text-nowrap rounded-full text-base border border-[#5278C3] text-[#5278C3] shadow-lg hover:scale-110 transition-transform'>
+                            <p className='p-2 lg:p-3'>
+                                All Sticker Collections
+                            </p>
                         </a>
                     </div>
                 </div>
 
-                {/* {clownCollection.map((clown) => (
-                    <Image
-                        src={clown.imageUrl}
-                        alt={clown.title}
-                        className='w-36 object-cover'
-                    />
-                ))} */}
                 <div className='flex justify-center items-start'>
                     <Image
                         src={blackClown}
                         alt='Black Clown'
-                        className='w-28 sm:w-32 object-contain blur-[0.75px]'
+                        className='w-1/4 object-contain blur-[0.75px]'
                     />
                     <Image
                         src={blueClown}
                         alt='Blue Clown'
-                        className='w-48 sm:w-64 mt-16 object-cover drop-shadow-custom-md'
+                        className='w-1/2 mt-16 object-cover drop-shadow-custom-md'
                     />
                     <Image
                         src={pinkClown}
                         alt='Pink Clown'
-                        className='w-28 sm:w-32 object-contain blur-[0.75px] '
+                        className='w-1/4 object-contain blur-[0.75px]'
                     />
                 </div>
-                <div className='flex gap-2'>
-                    <a className='md:hidden flex mt-3 md:mt-0 justify-center items-center w-44 rounded-full text-sm md:text-base bg-[#5278C3] text-white shadow-lg shadow-black/10 hover:scale-110'>
-                        <p className='px-3 py-3'>View Latest Collection</p>
+                <div className='md:hidden flex gap-3 mt-6'>
+                    <a className='flex justify-center items-center w-44 rounded-full text-sm bg-[#5278C3] text-white shadow-lg hover:scale-110 transition-transform'>
+                        <p className='p-2'>View Latest Collection</p>
                     </a>
-                    <a className='md:hidden flex mt-3 md:mt-0 justify-center items-center w-44 rounded-full text-sm md:text-base border border-[#5278C3] text-[#5278C3] shadow-lg shadow-black/10 hover:scale-110'>
-                        <p className='px-3 py-3'>All Sticker Collections</p>
+                    <a className='flex justify-center items-center w-44 rounded-full text-sm border border-[#5278C3] text-[#5278C3] shadow-lg hover:scale-110 transition-transform'>
+                        <p className='p-2'>All Sticker Collections</p>
                     </a>
                 </div>
             </div>
