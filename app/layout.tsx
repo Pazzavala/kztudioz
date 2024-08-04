@@ -14,6 +14,7 @@ import {
     Molle,
     Sedgwick_Ave_Display,
     Signika,
+    Ceviche_One,
 } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -27,6 +28,7 @@ const permanent_Marker = Permanent_Marker({
 const luckiest_Guy = Luckiest_Guy({ weight: '400', subsets: ['latin'] });
 const molle = Molle({ weight: '400', subsets: ['latin'] });
 const signika = Signika({ weight: '400', subsets: ['latin'] });
+const ceviche = Ceviche_One({ weight: '400', subsets: ['latin'] });
 const sedgwick_Ave_Display = Sedgwick_Ave_Display({
     weight: '400',
     subsets: ['latin'],
@@ -45,7 +47,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body className={`${molle.className} relative text-gray-950 pt-28`}>
+            <body
+                className={`${sedgwick_Ave_Display.className} relative text-gray-950 pt-28`}
+            >
                 <Background />
                 <ActiveSectionContextProvider>
                     <Header />

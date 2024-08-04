@@ -11,21 +11,21 @@ type collectionProps = (typeof coverCollection)[number];
 
 export default function Collection({ title, imageUrl }: collectionProps) {
     return (
-        <article className='flex my-3 sm:my-0 sm:h-[50rem] flex-col even:sm:flex-row sm:flex-row-reverse sm:justify-between justify-center items-center'>
+        <article className='group flex my-3 sm:my-0 sm:h-[43rem] flex-col  even:sm:flex-row-reverse sm:flex-row sm:justify-between items-center sm:items-start'>
             {/* Image */}
-            <div className=' flex flex-col m-2 w-80 sm:w-1/2 h-96 sm:h-[40rem] hover:scale-110 justify-center items-center sm:bg-none sm:border-none bg-gradient-to-br from-[#C6EFFF] to-[#D6D0FA] border border-black/5 rounded-xl transition'>
-                <div className='relative w-full h-full p-4'>
+            <div className='flex flex-col mx-6 w-80 sm:group-even:mx-0 sm:-mx-16 sm:w-1/2 h-96 sm:h-[40rem] hover:scale-110 justify-center items-center sm:bg-none sm:border-none bg-gradient-to-br from-[#C6EFFF] to-[#D6D0FA] border border-black/5 rounded-xl transition'>
+                <div className='relative w-full h-full p-4 '>
                     <Image
                         src={imageUrl}
                         alt={title}
                         layout='fill'
-                        className='object-contain rounded-xl drop-shadow-custom-lg p-4'
+                        className='object-contain flex justify-start rounded-xl drop-shadow-custom-lg p-4 sm:p-0 '
                     />
                 </div>
             </div>
 
             {/* Description of Collection */}
-            <div className='flex flex-col justify-center items-center sm:items-start sm:h-[40rem] sm:w-1/2 p-4'>
+            <div className='flex flex-col justify-center items-center sm:items-start sm:h-[40rem] sm:w-1/2 p-4 '>
                 <h3
                     className={`font-bold text-2xl sm:text-5xl sm:mb-4 text-gray-700`}
                 >

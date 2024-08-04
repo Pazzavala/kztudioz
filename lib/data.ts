@@ -69,10 +69,7 @@ export const navLinks = [
 
 // Probably add some tags, add date they were relased
 export const coverCollection = [
-    {
-        title: 'Clown Collection', 
-        imageUrl: blueClown,
-    },
+    
     {
         title: 'Dark Collection', 
         imageUrl: darkGirl1,
@@ -84,6 +81,10 @@ export const coverCollection = [
     {
         title: 'Months Collection', 
         imageUrl: january,
+    },
+    {
+        title: 'Clown Collection', 
+        imageUrl: blueClown,
     },
 ] as const;
 

@@ -26,14 +26,19 @@ export default function Hero() {
             className='max-w-7xl w-full mx-auto -mt-20 sm:mt-10 mb-16 sm:my-24 p-4 scroll-mt-96'
         >
             <div className='flex flex-col md:flex-row gap-7 sm:gap-16 items-center justify-center'>
-                <div className='flex flex-col sm:gap-8 text-center md:text-left justify-center '>
+                <div className='flex flex-col sm:gap-8 text-center justify-center '>
                     <h1
-                        className={` text-[#5278C3] font-black text-5xl sm:text-[4.5rem] leading-snug`}
+                        className={` text-[#5278C3] font-black text-5xl sm:text-[4.5rem] sm:mb-5 leading-snug`}
                     >
-                        New Sticker <br /> Drop!
+                        New Sticker
+                        <br />
+                        <span className='sm:text-[6.5rem] tracking-widest text-blue-950'>
+                            Drop!
+                        </span>
                     </h1>
+
                     <p
-                        className={`${inter.className} hidden sm:block md:mb-10 max-w-96 text-gray-700`}
+                        className={`${inter.className} hidden sm:block md:text-left ml-7 md:mb-16 max-w-96 text-gray-700`}
                     >
                         Introducing our vibrant new sticker collection featuring
                         a variety of artistic clowns, perfect for adding a touch
@@ -41,12 +46,12 @@ export default function Hero() {
                     </p>
                     <div className='hidden md:flex gap-5'>
                         <a
-                            className={`${inter.className} flex text-center justify-center items-center w-full text-nowrap rounded-full text-base bg-[#5278C3] text-white shadow-lg hover:scale-110 transition-transform`}
+                            className={`${inter.className} flex text-center justify-center items-center w-full text-nowrap rounded-full text-base font-medium bg-[#5278C3] text-white shadow-lg hover:scale-110 transition-transform`}
                         >
                             <p className='p-2 lg:p-3'>View Latest Collection</p>
                         </a>
                         <a
-                            className={`${inter.className} flex text-center justify-center items-center w-full text-nowrap rounded-full text-base border border-[#5278C3] text-[#5278C3] shadow-lg hover:scale-110 transition-transform`}
+                            className={`${inter.className} flex text-center justify-center items-center w-full text-nowrap rounded-full text-base font-medium border-[1px] bg-gray-200 bg-opacity-70 border-[#5278C3] text-[#5278C3] backdrop-blur-md shadow-lg hover:scale-110 transition-transform`}
                         >
                             <p className='p-2 lg:p-3'>
                                 All Sticker Collections

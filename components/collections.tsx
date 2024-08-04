@@ -22,7 +22,7 @@ export default function Collections() {
         >
             <div className='max-w-7xl w-full sm:my-8 p-4 pb-8 bg-gradient-to-br from-[#E9FAFF] to-[#FFF6F9] scroll-mt-16 sm:scroll-mt-48'>
                 <h2
-                    className={` text-4xl sm:text-7xl text-center mt-4 mb-8 text-[#5278C3]`}
+                    className={` text-4xl sm:text-7xl text-center mt-4 mb-20 text-[#5278C3]`}
                 >
                     Collections
                 </h2>
