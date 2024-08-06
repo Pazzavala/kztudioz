@@ -75,16 +75,16 @@ export const coverCollection = [
         imageUrl: darkGirl1,
     },
     {
-        title: 'Dichos Collection', 
-        imageUrl: ringRingBitch,
-    },
-    {
         title: 'Months Collection', 
         imageUrl: january,
     },
     {
         title: 'Clown Collection', 
         imageUrl: blueClown,
+    },
+    {
+        title: 'Dichos Collection', 
+        imageUrl: ringRingBitch,
     },
 ] as const;
 

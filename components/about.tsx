@@ -3,14 +3,6 @@ import Image from 'next/image';
 import React from 'react';
 import logo from '@/public/assets/logo.png';
 import useSectionInView from '@/lib/hooks';
-import { Inter, Itim, Molle, Montserrat, Signika } from 'next/font/google';
-import { SiNike } from 'react-icons/si';
-
-const inter = Inter({ subsets: ['latin'] });
-const montserrat = Montserrat({ subsets: ['latin'] });
-const itim = Itim({ weight: '400', subsets: ['latin'] });
-const molle = Molle({ weight: '400', subsets: ['latin'] });
-const signika = Signika({ weight: '400', subsets: ['latin'] });
 
 export default function About() {
     const { ref } = useSectionInView('About', 0.7);
@@ -19,7 +11,7 @@ export default function About() {
         <section
             ref={ref}
             id='about'
-            className='flex flex-col sm:flex-row max-w-7xl w-full sm:my-14 p-4 sm:justify-between items-center scroll-mt-10 sm:scroll-mt-44 '
+            className='flex flex-col md:flex-row max-w-7xl w-full sm:my-14 p-4 md:justify-between items-center scroll-mt-10 sm:scroll-mt-44 '
         >
             <Image
                 src={logo}
@@ -29,12 +21,12 @@ export default function About() {
             />
             <div className='max-w-lg text-center sm:mr-20 '>
                 <h3
-                    className={`${signika.className} mb-4 sm:mb-8 font-black text-xl sm:text-4xl text-[#5278C3]`}
+                    className={`mb-4 sm:mb-8 font-bold text-xl sm:text-3xl text-blue-kz`}
                 >
                     Welcome to our Community!
                 </h3>
                 <p
-                    className={`${inter.className} mb-28 sm:mb-0 leading-relaxed text-gray-800 sm:text-xl`}
+                    className={`mb-28 px-6 sm:mb-0 leading-relaxed text-gray-700 sm:text-base xl:text-xl`}
                 >
                     We specialize in creating unique,{' '}
                     <span className=''>hand-drawn</span> stickers that add a
@@ -47,7 +39,7 @@ export default function About() {
                         Let our art bring a smile to your day!
                     </span>
                 </p>
-                {/* <h3 className='mb-4 font-bold text-2xl text-[#5278C3]'>
+                {/* <h3 className='mb-4 font-bold text-2xl text-blue-kz'>
                     {' '}
                     Welcome to the KZtudioz community!
                 </h3>

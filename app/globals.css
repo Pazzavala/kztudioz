@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Akaya+Telivigala&family=Aladin&family=Ceviche+One&family=Fruktur:ital@0;1&family=Ga+Maamli&family=Itim&family=Marko+One&family=Molle&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sedgwick+Ave+Display&family=Signika:wght@300..700&family=Sonsie+One&family=Spicy+Rice&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

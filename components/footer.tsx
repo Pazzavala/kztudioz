@@ -1,13 +1,8 @@
 import React from 'react';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export default function Footer() {
     return (
-        <footer
-            className={`${inter.className} my-10 px-4 text-center text-gray-500`}
-        >
+        <footer className={` my-10 px-4 text-center text-gray-500`}>
             <small className='mb-2 block text-xs'>
                 &copy; 2024 Karla Zavala. All rights reserverd.
             </small>
