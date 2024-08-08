@@ -25,7 +25,7 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body
-                className={`${montserrat.className} relative text-gray-950 pt-28`}
+                className={`${montserrat.className} relative dark:bg-gray-900 text-gray-950 pt-28`}
             >
                 <Background />
                 <ActiveSectionContextProvider>

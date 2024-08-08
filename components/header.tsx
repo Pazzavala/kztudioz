@@ -33,20 +33,22 @@ export default function Header() {
                 animate={{ y: 0, opacity: 1 }}
                 className='relative md:static z-[9999] items-center cursor-pointer'
             >
-                <Image
-                    src={logo}
-                    alt='Kzstudio Logo'
-                    width={120}
-                    quality={95}
-                    priority={true}
-                    className='hidden sm:block fixed ml-1 md:ml-0 -top-2 left-0 md:static w-[4rem] md:w-36 drop-shadow-custom-md'
-                />
+                <a href='/'>
+                    <Image
+                        src={logo}
+                        alt='Kzstudio Logo'
+                        width={120}
+                        quality={95}
+                        priority={true}
+                        className='hidden sm:block fixed ml-1 md:ml-0 -top-2 left-0 md:static w-[4rem] md:w-36 drop-shadow-custom-md'
+                    />
+                </a>
             </motion.div>
 
             {/* Nav Bar */}
             <div className='relative z-[999]'>
                 <motion.div
-                    className='fixed top-0 md:top-16 left-1/2 h-[4.5rem] md:h-10 w-full md:w-[23rem] rounded-none bg-gray-200 bg-opacity-50 border border-gray-300 border-opacity-40 shadow-lg shadow-black/10 backdrop-blur-md md:rounded-full'
+                    className='fixed top-0 md:top-16 left-1/2 h-[4.5rem] md:h-10 w-full md:w-[23rem] rounded-none bg-gray-200 dark:bg-white dark:bg-opacity-10 bg-opacity-50 border border-gray-300 border-opacity-40 shadow-lg shadow-black/10 backdrop-blur-md md:rounded-full'
                     initial={{ y: 100, x: '-50%', opacity: 0 }}
                     animate={{ y: 0, x: '-50%', opacity: 1 }}
                 />
@@ -69,7 +71,7 @@ export default function Header() {
                                         setTimeOfLastClick(Date.now());
                                     }}
                                     className={clsx(
-                                        'flex w-full items-center p-2 justify-center text-gray-800 hover:text-blue-kz text-sm md:text-base transition',
+                                        'flex w-full items-center p-2 justify-center text-gray-800 dark:text-white hover:text-blue-kz text-sm md:text-base transition',
                                         {
                                             'text-blue-kz':
                                                 activeSection === navLink.name,
@@ -85,7 +87,7 @@ export default function Header() {
                                                 stiffness: 380,
                                                 damping: 30,
                                             }}
-                                            className='absolute bg-white rounded-full inset-0 -z-10 text-blue-kz'
+                                            className='absolute bg-white dark:bg-blue-kz rounded-full inset-0 -z-10 text-blue-kz'
                                         />
                                     )}
                                 </Link>
@@ -99,24 +101,24 @@ export default function Header() {
             <motion.div
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className='relative md:flex gap-2 h-10 items-center text-gray-700 sm:text-lg z-[9999] md:-mt-3'
+                className='relative md:flex gap-2 h-10 items-center text-gray-700 dark:text-gray-100 sm:text-lg z-[9999] md:-mt-3'
             >
                 <form className='flex items-center shadow-lg shadow-black/10 rounded-full '>
                     <input
                         onInput={handleSearchChange}
                         type='text'
                         placeholder='Search...'
-                        className='hidden md:block h-8 px-2 py-1 w-36 md:w-32 rounded-l-full text-sm focus:outline-none bg-gray-200 bg-opacity-50 border border-gray-300 border-opacity-40 md:backdrop-blur-md'
+                        className='hidden md:block h-8 px-2 py-1 w-36 md:w-32 rounded-l-full text-sm focus:outline-none bg-gray-200 bg-opacity-50 dark:bg-white dark:bg-opacity-10 border border-gray-300 border-opacity-40 md:backdrop-blur-md'
                     />
                     <button
                         onClick={handleSearchSubmit}
                         type='submit'
-                        className='fixed md:static top-5 right-1 h-8 px-2 py-1 rounded-full md:rounded-none md:rounded-r-full md:bg-gray-200 md:hover:bg-blue-kz md:bg-opacity-50 md:border border-gray-300 border-opacity-40 md:backdrop-blur-md text-[#5278C] hover:text-white transition'
+                        className='fixed md:static top-5 right-1 h-8 px-2 py-1 rounded-full md:rounded-none md:rounded-r-full md:bg-gray-200 dark:bg-white dark:bg-opacity-10 md:hover:bg-blue-kz md:bg-opacity-50 md:border border-gray-300 border-opacity-40 md:backdrop-blur-md text-[#5278C] hover:text-white transition'
                     >
                         <IoSearch className='text-lg' />
                     </button>
                 </form>
-                <button className='fixed md:static top-5 right-8 h-8 px-2 py-1 rounded-full md:bg-gray-200 md:hover:bg-kzBlue md:bg-opacity-50 md:border border-gray-300 border-opacity-40 md:shadow-lg shadow-black/10 md:backdrop-blur-md text-[#5278C] hover:text-white transition'>
+                <button className='fixed md:static top-5 right-8 h-8 px-2 py-1 rounded-full md:bg-gray-200 md:hover:bg-kzBlue md:bg-opacity-50 md:border dark:bg-white dark:bg-opacity-10 border-gray-300 border-opacity-40 md:shadow-lg shadow-black/10 md:backdrop-blur-md text-[#5278C] hover:text-white transition'>
                     <IoCart className='text-lg' />
                 </button>
             </motion.div>

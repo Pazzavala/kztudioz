@@ -12,11 +12,11 @@ export default function Collections() {
         <section
             ref={ref}
             id='shop'
-            className='flex w-full justify-center bg-gradient-to-br from-[#e2f8ff] to-[#fff2f6] scroll-mt-16 sm:scroll-mt-[7.5rem]'
+            className='flex w-full justify-center bg-gradient-to-br from-[#e2f8ff] to-[#fff2f6] dark:from-blue-800 dark:to-[#c2a6fa] scroll-mt-16 sm:scroll-mt-[7.5rem]'
         >
             <div className='max-w-7xl w-full sm:my-8 p-4 pb-8 scroll-mt-16 sm:scroll-mt-48'>
                 <h2
-                    className={`font-sedgwick-ave-display text-4xl sm:text-7xl font-bold tracking-wider text-center mt-4 mb-20 text-blue-kz`}
+                    className={`font-sedgwick-ave-display text-4xl sm:text-7xl font-bold tracking-wider text-center mt-4 mb-20 text-blue-kz dark:text-white`}
                 >
                     Collections
                 </h2>

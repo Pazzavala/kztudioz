@@ -2,6 +2,7 @@ import About from '@/components/about';
 import Collections from '@/components/collections';
 import Contact from '@/components/contact';
 import Hero from '@/components/hero';
+// import Shop from '@/components/shop';
 
 export default function Home() {
     return (
@@ -10,6 +11,7 @@ export default function Home() {
             <Collections />
             <About />
             <Contact />
+            {/* <Shop /> */}
         </main>
     );
 }

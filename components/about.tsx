@@ -21,12 +21,12 @@ export default function About() {
             />
             <div className='max-w-lg text-center sm:mr-20 '>
                 <h3
-                    className={`mb-4 sm:mb-8 font-bold text-xl sm:text-3xl text-blue-kz`}
+                    className={`mb-4 sm:mb-8 font-bold text-xl sm:text-3xl text-blue-kz dark:text-blue-500`}
                 >
                     Welcome to our Community!
                 </h3>
                 <p
-                    className={`mb-28 px-6 sm:mb-0 leading-relaxed text-gray-700 sm:text-base xl:text-xl`}
+                    className={`mb-28 px-6 sm:mb-0 leading-relaxed text-gray-700 dark:text-gray-100 sm:text-base xl:text-xl`}
                 >
                     We specialize in creating unique,{' '}
                     <span className=''>hand-drawn</span> stickers that add a

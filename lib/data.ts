@@ -47,6 +47,7 @@ import march from '@/public/assets/images/months/march.png';
 import may from '@/public/assets/images/months/may.png';
 import october from '@/public/assets/images/months/october.png';
 import september from '@/public/assets/images/months/september.png';
+import { url } from 'inspector';
 
 export const navLinks = [
     {
@@ -67,26 +68,6 @@ export const navLinks = [
     }
 ] as const;
 
-// Probably add some tags, add date they were relased
-export const coverCollection = [
-    
-    {
-        title: 'Dark Collection', 
-        imageUrl: darkGirl1,
-    },
-    {
-        title: 'Months Collection', 
-        imageUrl: january,
-    },
-    {
-        title: 'Clown Collection', 
-        imageUrl: blueClown,
-    },
-    {
-        title: 'Dichos Collection', 
-        imageUrl: ringRingBitch,
-    },
-] as const;
 
 export const clownCollection = [
     {
@@ -94,24 +75,28 @@ export const clownCollection = [
         description: '...',
         tags:['Clown', 'Black', 'Girl'],
         imageUrl: blackClown,
+        shopLink: '',
     },
     {
         title:'Blue Clown',
         description: '...',
         tags: ['Clown', 'Blue', 'Girl'],
         imageUrl: blueClown,
+        shopLink: 'https://buy.stripe.com/test_6oEaHl9z7cQmdDGaEE',
     },
     {
         title: 'Pink Clown',
         description: '...',
         tags:['Clown', 'Pink', 'Girl'],
         imageUrl: pinkClown,
+        shopLink: '',
     },
     {
         title: 'Red Clown',
         description: '...',
         tags:['Clown', 'Red', 'Girl'],
         imageUrl: redClown,
+        shopLink: '',
     },
 ] as const;
 
@@ -337,5 +322,30 @@ export const monthsCollection = [
         description: '...',
         tags: ['September'],
         imageUrl: september,
+    },
+] as const;
+
+// Probably add some tags, add date they were relased
+export const coverCollection = [
+    
+    {
+        title: 'Dark Collection', 
+        imageUrl: darkGirl1,
+        allStickers: darkCollection
+    },
+    {
+        title: 'Months Collection', 
+        imageUrl: january,
+        allStickers: monthsCollection,
+    },
+    {
+        title: 'Clown Collection', 
+        imageUrl: blueClown,
+        allStickers: clownCollection,
+    },
+    {
+        title: 'Dichos Collection', 
+        imageUrl: ringRingBitch,
+        allStickers: dichosCollection,
     },
 ] as const;
