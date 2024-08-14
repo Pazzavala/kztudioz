@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import '../globals.css';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Background from '@/components/background';
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import { Inter, Montserrat, Itim } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
+import { ClerkProvider } from '@clerk/nextjs';
 
 const inter = Inter({ subsets: ['latin'] });
 const montserrat = Montserrat({ subsets: ['latin'] });
@@ -29,10 +30,13 @@ export default function RootLayout({
             >
                 <Background />
                 <ActiveSectionContextProvider>
-                    <Header />
-                    {children}
-                    <Footer />
-                    <Toaster position='top-right' />
+                    <ClerkProvider>
+                        <Header />
+
+                        {children}
+                        <Footer />
+                        <Toaster position='top-right' />
+                    </ClerkProvider>
                 </ActiveSectionContextProvider>
             </body>
         </html>
