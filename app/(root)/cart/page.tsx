@@ -53,7 +53,10 @@ export default function Cart() {
             ) : (
                <div>
                   {cart.cartItems.map((cartItem) => (
-                     <div className='w-full flex max-sm:flex-col max-sm:gap-5 hover:bg-gray-200 px-6 py-5 items-center justify-between'>
+                     <div
+                        key={cartItem.item._id}
+                        className='w-full flex max-sm:flex-col max-sm:gap-5 hover:bg-gray-200 px-6 py-5 items-center justify-between'
+                     >
                         <div className='flex items-center'>
                            <Image
                               src={cartItem.item.media[0]}
@@ -119,3 +122,5 @@ export default function Cart() {
       </div>
    );
 }
+
+export const dynamic = 'force-dynamic';

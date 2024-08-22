@@ -9,26 +9,25 @@ import logo from '@/public/assets/logo.png';
 import Navbar from './navbar';
 import { FaUser } from 'react-icons/fa';
 import Link from 'next/link';
-import { HiOutlineMenu } from 'react-icons/hi';
-import { Button } from '@react-email/components';
 import useCart from '@/lib/hooks/useCart';
-import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { navLinks } from '@/lib/data';
 
 export default function Header() {
    // const pathname = usePathname();
    const [searchQuery, setSearchQuery] = useState('');
    const { user } = useUser();
+   const router = useRouter();
    const cart = useCart();
    const [dropdownMenu, setDropdownMenu] = useState(false);
 
-   const handleSearchChange = (s: any) => {
-      setSearchQuery(s.target.value);
-   };
+   // const handleSearchChange = (s: any) => {
+   //    setSearchQuery(s.target.value);
+   // };
 
-   const handleSearchSubmit = (s: any) => {
-      s.preventDefault();
-   };
+   // const handleSearchSubmit = (s: any) => {
+   //    s.preventDefault();
+   // };
 
    return (
       <header className='flex max-w-[87rem] w-full mx-auto px-4 justify-between items-center md:-mt-[7.25rem]'>
@@ -58,21 +57,22 @@ export default function Header() {
             animate={{ y: 0, opacity: 1 }}
             className='relative md:flex gap-2 h-10 items-center text-gray-700 dark:text-gray-100 sm:text-lg z-[9999] md:-mt-3'
          >
-            <form className='flex items-center shadow-lg shadow-black/10 rounded-full '>
+            <div className='flex border border-gray-300 items-center shadow-lg shadow-black/10 rounded-full '>
                <input
-                  onInput={handleSearchChange}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                   type='text'
                   placeholder='Search...'
                   className='hidden lg:block h-8 px-2 py-1 w-36 md:w-32 rounded-l-full text-sm focus:outline-none bg-gray-200 bg-opacity-50 dark:bg-white dark:bg-opacity-10 border border-gray-300 border-opacity-40 md:backdrop-blur-md'
                />
-               <Link
-                  href={'/search'}
-                  type='submit'
+               <button
+                  disabled={searchQuery === ''}
+                  onClick={() => router.push(`/search/${searchQuery}`)}
                   className='fixed top-5 right-24 md:static flex justify-center items-center h-8 px-2 py-1 rounded-full lg:rounded-none lg:rounded-r-full md:bg-gray-200 dark:bg-white dark:bg-opacity-10 md:hover:bg-blue-kz md:bg-opacity-50 md:border border-gray-300 border-opacity-40 md:backdrop-blur-md text-[#5278C] hover:text-white transition'
                >
                   <IoSearch className='text-lg' />
-               </Link>
-            </form>
+               </button>
+            </div>
             <Link
                href={'/cart'}
                className='fixed top-5 right-[8.6rem] md:static flex gap-2 justify-center items-center  h-8 px-2 py-1 rounded-full md:bg-gray-200 dark:bg-white dark:bg-opacity-10 md:hover:bg-blue-kz md:bg-opacity-50 md:border border-gray-300 border-opacity-40 md:backdrop-blur-md text-[#5278C] hover:text-white transition'
@@ -93,7 +93,9 @@ export default function Header() {
             {dropdownMenu && (
                <div className='fixed top-16 right-14 flex flex-col gap-4 p-3 rounded-lg border bg-white dark:bg-surface-mixed-200 text-base-bold lg:hidden'>
                   {navLinks.map((navLink, index) => (
-                     <Link href={navLink.hash}>{navLink.name}</Link>
+                     <Link key={index} href={navLink.hash}>
+                        {navLink.name}
+                     </Link>
                   ))}
                   <Link
                      href={user ? '/wishlist' : '/sign-in'}

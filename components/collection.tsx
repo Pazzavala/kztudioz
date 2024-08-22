@@ -20,14 +20,16 @@ export default function Collection({
          {/* Image */}
          <div className='flex flex-col mx-6 w-80 sm:group-even:mx-0 sm:-mx-16 sm:w-1/2 h-96 sm:h-[40rem] justify-center items-center sm:bg-none sm:border-none bg-gradient-to-br from-[#C6EFFF] to-[#D6D0FA] border border-black/5 rounded-xl transition'>
             <div className='relative w-full h-full p-4'>
-               <Image
-                  src={media[0]}
-                  alt={title}
-                  width={350}
-                  height={200}
-                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                  className='object-contain flex justify-start rounded-xl drop-shadow-custom-lg p-4 sm:p-0 '
-               />
+               <Link href={`/collections/${_id}`}>
+                  <Image
+                     src={media[0]}
+                     alt={title}
+                     width={350}
+                     height={200}
+                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                     className='object-contain flex justify-start rounded-xl drop-shadow-custom-lg p-4 sm:p-0 '
+                  />
+               </Link>
             </div>
          </div>
          {/* Description of Collection */}

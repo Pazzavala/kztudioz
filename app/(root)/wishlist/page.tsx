@@ -1,13 +1,14 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+import { useUser } from '@clerk/nextjs';
+
 import Loader from '@/components/Loader';
 import ProductCard from '@/components/ProductCard';
 import { getProductDetails } from '@/lib/actions/actions';
 import { ProductType, UserType } from '@/lib/types';
-import { useUser } from '@clerk/nextjs';
-import { use, useEffect, useState } from 'react';
 
-const Wishlist = () => {
+export default function Wishlist() {
    const { user } = useUser();
 
    const [loading, setLoading] = useState(true);
@@ -75,8 +76,6 @@ const Wishlist = () => {
          </div>
       </div>
    );
-};
+}
 
 export const dynamic = 'force-dynamic';
-
-export default Wishlist;

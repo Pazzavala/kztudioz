@@ -15,14 +15,14 @@ export default function ProductCard({
    return (
       <Link
          href={`/products/${product._id}`}
-         className='w-[220px] flex flex-col gap-2'
+         className='w-[220px] flex flex-col gap-2 bg-white p-5 rounded-lg'
       >
          <Image
-            src={product.media[0]}
+            src={typeof product === 'object' ? product.media[0] : ''}
             alt='product'
             width={250}
             height={300}
-            className='h-[250px] rounded-lg object-cover'
+            className='h-[250px] rounded-lg object-contain'
          />
          <div>
             <p className='text-base-bold'>{product.title}</p>
