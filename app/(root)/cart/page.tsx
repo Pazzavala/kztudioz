@@ -29,7 +29,7 @@ export default function Cart() {
    const handleCheckout = async () => {
       try {
          if (!user) router.push('/sign-in');
-         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
+         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/checkout`, {
             method: 'POST',
             body: JSON.stringify({
                cartItems: cart.cartItems,
