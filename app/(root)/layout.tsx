@@ -5,40 +5,42 @@ import Footer from '@/components/footer';
 import Background from '@/components/background';
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import { Inter, Montserrat, Itim } from 'next/font/google';
-import { Toaster } from 'react-hot-toast';
 import { ClerkProvider } from '@clerk/nextjs';
+import ToasterProvider from '@/lib/providers/ToasterProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 const montserrat = Montserrat({ subsets: ['latin'] });
 const itim = Itim({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: "Karla's | Kztudioz Webpage",
-    description:
-        'Karla is a custom sticker maker who has diffrent sticker collections.',
+   title: "Karla's | Kztudioz Webpage",
+   description:
+      'Karla is a custom sticker maker who has diffrent sticker collections.',
 };
 
 export default function RootLayout({
-    children,
+   children,
 }: Readonly<{
-    children: React.ReactNode;
+   children: React.ReactNode;
 }>) {
-    return (
-        <html lang='en'>
-            <body
-                className={`${montserrat.className} relative dark:bg-gray-900 text-gray-950 pt-28`}
-            >
-                <Background />
-                <ActiveSectionContextProvider>
-                    <ClerkProvider>
-                        <Header />
-
-                        {children}
-                        <Footer />
-                        <Toaster position='top-right' />
-                    </ClerkProvider>
-                </ActiveSectionContextProvider>
-            </body>
-        </html>
-    );
+   return (
+      <html lang='en'>
+         <head>
+            <script src='http://localhost:8097'></script>
+         </head>
+         <body
+            className={`${montserrat.className} relative dark:bg-gray-900 text-gray-950 pt-28`}
+         >
+            <Background />
+            <ActiveSectionContextProvider>
+               <ClerkProvider>
+                  <ToasterProvider />
+                  <Header />
+                  {children}
+                  <Footer />
+               </ClerkProvider>
+            </ActiveSectionContextProvider>
+         </body>
+      </html>
+   );
 }
