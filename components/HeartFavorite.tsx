@@ -8,11 +8,13 @@ import { IoHeart } from 'react-icons/io5';
 interface HeartFavoriteProps {
    product: ProductType;
    updateSignedInUser?: (updatedUser: UserType) => void;
+   // size?: number;
 }
 export default function HeartFavorite({
    product,
    updateSignedInUser,
-}: HeartFavoriteProps) {
+}: // size,
+HeartFavoriteProps) {
    const router = useRouter();
    const { user } = useUser();
 

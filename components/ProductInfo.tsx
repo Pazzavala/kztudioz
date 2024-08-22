@@ -16,7 +16,7 @@ export default function ProductInfo({ productInfo }: ProductInfoProps) {
       <div className='max-w-[401px] flex flex-col gap-4 min-w-[400px]'>
          <div className='flex justify-between items-center'>
             <h3 className='text-xl font-bold'>{productInfo.title}</h3>
-            <HeartFavorite product={productInfo} size={28} />
+            <HeartFavorite product={productInfo} />
          </div>
          <p className='text-xl font-medium'>$ {productInfo.price}</p>
          <div className='flex flex-col gap-2'>
