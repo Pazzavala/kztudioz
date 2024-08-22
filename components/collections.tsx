@@ -40,4 +40,3 @@ export default async function Collections() {
       </section>
    );
 }
-export const dynamic = 'force-dynamic';

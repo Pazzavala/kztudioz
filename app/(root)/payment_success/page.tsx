@@ -25,5 +25,3 @@ export default function SuccessfulPayment() {
       </div>
    );
 }
-
-export const dynamic = 'force-dynamic';
