@@ -4,6 +4,8 @@ import ProductInfo from '@/components/ProductInfo';
 import { getProductDetails, getRelatedProducts } from '@/lib/actions/actions';
 import { ProductType } from '@/lib/types';
 
+export const dynamic = 'force-dynamic';
+
 const ProductDetails = async ({ params }: { params: { productId: string } }) => {
    const productDetails = await getProductDetails(params.productId);
    const relatedProducts = await getRelatedProducts(params.productId);
@@ -28,5 +30,3 @@ const ProductDetails = async ({ params }: { params: { productId: string } }) => 
 };
 
 export default ProductDetails;
-
-export const dynamic = 'force-dynamic';
