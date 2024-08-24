@@ -1,8 +1,10 @@
 import ProductCard from '@/components/ProductCard';
-import { getCollectionDetails } from '@/lib/actions/actions';
+import { getCollectionDetails, getProductDetails } from '@/lib/actions/actions';
 import { ProductType } from '@/lib/types';
 import Image from 'next/image';
 import React from 'react';
+
+export const dynamic = 'force-dynamic';
 
 export default async function CollectionDetails({
    params,
@@ -11,7 +13,7 @@ export default async function CollectionDetails({
 }) {
    const collectionDetails = await getCollectionDetails(params.collectionId);
 
-   console.log(collectionDetails);
+   // console.log(collectionDetails);
    return (
       <div className='px-10 py-5 text-gray-700 flex flex-col items-center gap-8'>
          <Image
@@ -26,12 +28,18 @@ export default async function CollectionDetails({
             {collectionDetails.description}
          </p>
          <div className='flex flex-wrap gap-16 mx-auto '>
-            {collectionDetails.products.map((product: ProductType) => (
-               <ProductCard key={product._id} product={product} />
-            ))}
+            {/* {collectionDetails.products.map(async (productId: string) => {
+               const product = await getProductDetails(productId);
+               <ProductCard key={product._id} product={product} />;
+               console.log(product);
+            })} */}
+            {collectionDetails.products.map((product: ProductType) => {
+               console.log(`Product IS THIS: ${product}`);
+               // <Image src={product.media[0]} alt='pr' />;
+
+               <ProductCard key={product._id} product={product} />;
+            })}
          </div>
       </div>
    );
 }
-
-export const dynamic = 'force-dynamic';

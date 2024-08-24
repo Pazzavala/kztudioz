@@ -175,5 +175,16 @@ module.exports = {
 
          addUtilities(newUtilities, ['responsive', 'hover']);
       },
+
+      function ({ addUtilities }) {
+         const newUtilities = {
+            '.flex-center': {
+               display: 'flex',
+               justifyContent: 'center',
+               alignItems: 'center',
+            },
+         };
+         addUtilities(newUtilities, ['responsive', 'hover']);
+      },
    ],
 };

@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 export default async function Collections() {
    //    const { ref } = useSectionInView('Shop', 0.3);
-   const collections: CollectionType[] = await getCollections();
+   const collections = await getCollections();
 
    return (
       <section

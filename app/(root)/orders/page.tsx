@@ -30,17 +30,12 @@ const Orders = async () => {
                      </p>
                   </div>
 
-                  {/* <div className='flex flex-col gap-5'>
+                  <div className='flex flex-col gap-5'>
                      {order.products?.map((orderItem: OrderItemType) => (
                         <div key={orderItem._id} className='flex gap-4'>
                            <Image
-                              // src={orderItem.product.media[0]}
-                              src={
-                                 typeof orderItem.product === 'object'
-                                    ? orderItem.product.media[0]
-                                    : ''
-                              }
-                              alt={orderItem.product.title}
+                              src={orderItem.product?.media?.[0] || ''}
+                              alt={orderItem.product?.title || 'Product image'}
                               width={100}
                               height={100}
                               className='w-32 h-32 object-cover rounded-lg'
@@ -67,7 +62,7 @@ const Orders = async () => {
                            </div>
                         </div>
                      ))}
-                  </div> */}
+                  </div>
                </div>
             ))}
          </div>

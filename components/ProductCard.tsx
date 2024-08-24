@@ -18,7 +18,9 @@ export default function ProductCard({
          className='w-[220px] flex flex-col gap-2 bg-white p-5 rounded-lg'
       >
          <Image
-            src={typeof product === 'object' ? product.media[0] : ''}
+            // src={typeof product === 'object' ? product.media[0] : ''}
+            // src={product?.media?.[0] || ''}
+            src={product.media[0]}
             alt='product'
             width={250}
             height={300}
