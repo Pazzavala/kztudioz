@@ -24,7 +24,7 @@ export default function ProductInfo({ productInfo }: ProductInfoProps) {
       <p className='text-xl font-medium'>$ {productInfo.price}</p>
       <div className='flex flex-col gap-2'>
         <p className='text-base font-semibold'>Description:</p>
-        <p className='text-sm font-medium text-gray-700'>
+        <p className='text-sm font-medium text-gray-700 dark:text-gray-100'>
           {productInfo.description}
         </p>
       </div>
