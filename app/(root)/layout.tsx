@@ -13,32 +13,32 @@ const montserrat = Montserrat({ subsets: ['latin'] });
 const itim = Itim({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-   title: "Karla's | Kztudioz Webpage",
-   description:
-      'Karla is a custom sticker maker who has diffrent sticker collections.',
+  title: "Karla's | Kztudioz Webpage",
+  description:
+    'Karla is a custom sticker maker who has diffrent sticker collections.',
 };
 
 export default function RootLayout({
-   children,
+  children,
 }: Readonly<{
-   children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-   return (
-      <html lang='en'>
-         <head>
-            <script src='http://localhost:8097'></script>
-         </head>
-         <body className={`${montserrat.className} relative  text-gray-950`}>
-            <Background />
-            <ActiveSectionContextProvider>
-               <ClerkProvider>
-                  <ToasterProvider />
-                  <Header />
-                  {children}
-                  <Footer />
-               </ClerkProvider>
-            </ActiveSectionContextProvider>
-         </body>
-      </html>
-   );
+  return (
+    <html lang='en'>
+      <head>
+        <script src='http://localhost:8097'></script>
+      </head>
+      <body className={`${montserrat.className} relative  text-gray-950`}>
+        <Background />
+        <ActiveSectionContextProvider>
+          <ClerkProvider>
+            <ToasterProvider />
+            <Header />
+            {children}
+            <Footer />
+          </ClerkProvider>
+        </ActiveSectionContextProvider>
+      </body>
+    </html>
+  );
 }
