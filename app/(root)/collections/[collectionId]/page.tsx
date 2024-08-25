@@ -13,7 +13,14 @@ export default async function CollectionDetails({
 }) {
    const collectionDetails = await getCollectionDetails(params.collectionId);
 
-   // console.log(collectionDetails);
+   const products = await Promise.all(
+      collectionDetails.products.map(async (productId: string) => {
+         const res = await getProductDetails(productId);
+         return res as ProductType;
+      })
+   );
+   // console.log(products);
+
    return (
       <div className='px-10 py-5 text-gray-700 flex flex-col items-center gap-8'>
          <Image
@@ -28,16 +35,8 @@ export default async function CollectionDetails({
             {collectionDetails.description}
          </p>
          <div className='flex flex-wrap gap-16 mx-auto '>
-            {/* {collectionDetails.products.map(async (productId: string) => {
-               const product = await getProductDetails(productId);
-               <ProductCard key={product._id} product={product} />;
-               console.log(product);
-            })} */}
-            {collectionDetails.products.map((product: ProductType) => {
-               console.log(`Product IS THIS: ${product}`);
-               // <Image src={product.media[0]} alt='pr' />;
-
-               <ProductCard key={product._id} product={product} />;
+            {products.map((product: ProductType) => {
+               return <ProductCard key={product._id} product={product} />;
             })}
          </div>
       </div>
