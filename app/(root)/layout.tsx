@@ -28,13 +28,13 @@ export default function RootLayout({
       <head>
         <script src='http://localhost:8097'></script>
       </head>
-      <body className={`${montserrat.className} relative  text-gray-950`}>
+      <body className={`${montserrat.className} relative text-gray-950`}>
         <Background />
         <ActiveSectionContextProvider>
           <ClerkProvider>
             <ToasterProvider />
             <Header />
-            {children}
+            <div className='relative z-10'>{children}</div>
             <Footer />
           </ClerkProvider>
         </ActiveSectionContextProvider>
