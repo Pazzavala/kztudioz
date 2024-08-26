@@ -10,6 +10,7 @@ import blueClown from '@/public/assets/images/clowns/blue_clown.png';
 import pinkClown from '@/public/assets/images/clowns/pink_clown.png';
 import redClown from '@/public/assets/images/clowns/red_clown.png';
 import useSectionInView from '@/lib/hooks/useSectionInView';
+import Link from 'next/link';
 
 export default function Hero() {
   const { ref } = useSectionInView('Home', 0.8);
@@ -40,17 +41,19 @@ export default function Hero() {
             any surface!
           </p>
           <div className='hidden md:flex gap-5'>
-            <a
-              className={`flex text-center flex-center w-full text-nowrap rounded-full text-base font-medium bg-blue-kz text-white dark:bg-blue-500 shadow-lg hover:scale-110 transition-transform`}
+            <Link
+              href={'/#shop'}
+              className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full text-base font-medium bg-blue-kz text-white dark:bg-blue-500 shadow-lg hover:scale-110 transition-transform`}
             >
               <p className='p-2 lg:p-3'>View Latest Collection</p>
-            </a>
-            <a
+            </Link>
+            <Link
+              href={'/#shop'}
               // border-blue-kz text-blue-kz
-              className={`flex text-center flex-center w-full text-nowrap rounded-full text-base font-medium border-[1px] bg-gray-50 dark:bg-blue-kz bg-opacity-30 dark:bg-opacity-20 border-blue-kz dark:border-blue-500 text-blue-kz dark:text-gray-100 shadow-lg hover:scale-110 transition-transform`}
+              className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full text-base font-medium border-[1px] bg-gray-50 dark:bg-blue-kz bg-opacity-30 dark:bg-opacity-20 border-blue-kz dark:border-blue-500 text-blue-kz dark:text-gray-100 shadow-lg hover:scale-110 transition-transform`}
             >
               <p className='p-2 lg:p-3'>All Sticker Collections</p>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -72,12 +75,18 @@ export default function Hero() {
           />
         </div>
         <div className={`md:hidden flex gap-3 mt-6`}>
-          <a className='flex flex-center w-44 rounded-full text-sm bg-blue-kz dark:bg-blue-500 text-white shadow-lg'>
+          <Link
+            href={'/#shop'}
+            className='flex flex-center w-44 rounded-full text-sm bg-blue-kz dark:bg-blue-500 text-white shadow-lg'
+          >
             <p className='p-2'>View Latest Collection</p>
-          </a>
-          <a className='flex flex-center w-44 rounded-full text-sm bg-opacity-30 dark:bg-opacity-20 dark:bg-blue-kz  border border-blue-kz dark:border-blue-500 text-blue-kz dark:text-white shadow-lg'>
+          </Link>
+          <Link
+            href={'/#shop'}
+            className='flex flex-center w-44 rounded-full text-sm bg-opacity-30 dark:bg-opacity-20 dark:bg-blue-kz  border border-blue-kz dark:border-blue-500 text-blue-kz dark:text-white shadow-lg'
+          >
             <p className='p-2'>All Sticker Collections</p>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
