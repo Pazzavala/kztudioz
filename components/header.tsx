@@ -1,8 +1,6 @@
 'use client';
-
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { IoCart, IoMenu, IoSearch } from 'react-icons/io5';
+import { IoCart } from 'react-icons/io5';
 import Image from 'next/image';
 import { UserButton, useUser } from '@clerk/nextjs';
 import logo from '@/public/assets/logo.png';
@@ -10,23 +8,12 @@ import Navbar from './navbar';
 import { FaUser } from 'react-icons/fa';
 import Link from 'next/link';
 import useCart from '@/lib/hooks/useCart';
-import { useRouter } from 'next/navigation';
-import { navLinks } from '@/lib/data';
 import Menu from './Menu';
+import Search from './Search';
 
 export default function Header() {
-  const [searchQuery, setSearchQuery] = useState('');
   const { user } = useUser();
-  const router = useRouter();
   const cart = useCart();
-
-  // const handleSearchChange = (s: any) => {
-  //    setSearchQuery(s.target.value);
-  // };
-
-  // const handleSearchSubmit = (s: any) => {
-  //    s.preventDefault();
-  // };
 
   return (
     <header className='flex max-w-[87rem] w-full mx-auto px-4 justify-between items-center'>
@@ -57,22 +44,7 @@ export default function Header() {
         className='relative md:flex gap-2 h-10 items-center text-gray-700 dark:text-gray-100 sm:text-lg z-[999] md:-mt-3'
       >
         {/* Search could do right 1/2 */}
-        <div className='fixed top-5 right-[8.5rem] lg:static flex items-center lg:shadow-lg shadow-black/10 rounded-full text-gray-500 lg:text-white'>
-          <input
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            type='text'
-            placeholder='Search...'
-            className='h-8 px-2 py-1 w-28 lg:w-32 rounded-l-full text-sm focus:outline-none lg:bg-gray-200 lg:bg-opacity-50 dark:bg-white dark:bg-opacity-60 lg:dark:bg-opacity-10 lg:border-b border-gray-300 border-opacity-40 backdrop-blur-md'
-          />
-          <button
-            disabled={searchQuery === ''}
-            onClick={() => router.push(`/search/${searchQuery}`)}
-            className='flex flex-center h-8 px-2 py-1 rounded-none rounded-r-full bg-gray-200 dark:bg-white dark:bg-opacity-60 lg:dark:bg-opacity-10  hover:bg-blue-kz bg-opacity-50 border border-gray-300 border-opacity-40 backdrop-blur-md text-[#5278C] hover:text-white transition'
-          >
-            <IoSearch className='text-lg' />
-          </button>
-        </div>
+        <Search />
 
         {/* Cart */}
         <Link

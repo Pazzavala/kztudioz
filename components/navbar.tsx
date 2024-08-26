@@ -15,7 +15,7 @@ export default function Navbar() {
     <div className='relative z-[99]'>
       {/* Transparent Background */}
       <motion.div
-        className='fixed top-0 lg:top-16 left-1/2 h-[5rem] w-full lg:h-10 lg:w-[33rem] rounded-none bg-white/10 dark:bg-white/20 border-gray-400 border-opacity-20 shadow-lg shadow-black/10 backdrop-blur-md lg:rounded-full'
+        className='fixed top-0 lg:top-[4.12rem] left-1/2 h-[5rem] lg:h-9 w-full lg:w-[33rem] rounded-none bg-white/10 dark:bg-white/20 border-gray-400 border-opacity-20 shadow-lg shadow-black/10 backdrop-blur-md lg:rounded-full'
         initial={{ y: 100, x: '-50%', opacity: 0 }}
         animate={{ y: 0, x: '-50%', opacity: 1 }}
       />
