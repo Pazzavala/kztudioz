@@ -10,9 +10,25 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        112: '28rem', // 7rem x 4 = 28rem
+        128: '32rem', // 8rem x 4 = 32rem
+        144: '36rem', // 9rem x 4 = 36rem
+        160: '40rem', // 10rem x 4 = 40rem
+        176: '44rem', // 11rem x 4 = 44rem
+        192: '48rem', // 12rem x 4 = 48rem
+        208: '52rem', // 13rem x 4 = 52rem
+        224: '56rem', // 14rem x 4 = 56rem
+        240: '60rem', // 15rem x 4 = 60rem
+        256: '64rem', // 16rem x 4 = 64rem
+        272: '68rem', // 17rem x 4 = 68rem
+        288: '72rem', // 18rem x 4 = 72rem
+        304: '76rem', // 19rem x 4 = 76rem
+        320: '80rem', // 20rem x 4 = 80rem
+      },
       // For moving circles in background
       animation: {
-        blob: 'blob 7s infinite',
+        blob: 'blob 15s infinite',
       },
       keyframes: {
         blob: {
@@ -148,11 +164,11 @@ module.exports = {
         'surface-400': '#575757',
         'surface-500': '#717171',
         'surface-600': '#8b8b8b',
-        'surface-mixed-100': '#1a1a26',
-        'surface-mixed-200': '#2f2f3a',
-        'surface-mixed-300': '#464550',
-        'surface-mixed-400': '#5d5d67',
-        'surface-mixed-500': '#76767e',
+        'surface-mixed-100': '#0b071f',
+        'surface-mixed-200': '#0e092b',
+        'surface-mixed-300': '#160f3f',
+        'surface-mixed-400': '#1f1750',
+        'surface-mixed-500': '#5d5d67',
         'surface-mixed-600': '#909097',
       },
       //  colors: {
@@ -233,6 +249,28 @@ module.exports = {
         },
       };
       addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+    //ex: circle-wh-10
+    function ({ addUtilities, theme, e }) {
+      const sizes = theme('spacing');
+      const newUtilities = Object.keys(sizes).reduce((acc, size) => {
+        acc[`.circle-wh-${size}`] = {
+          width: sizes[size],
+          height: sizes[size],
+        };
+        return acc;
+      }, {});
+
+      // For arbitrary values
+      const arbitraryUtilities = {
+        '[class^=circle-wh-\\[]': {
+          width: 'var(--circle-width)',
+          height: 'var(--circle-height)',
+        },
+      };
+
+      addUtilities(newUtilities, ['responsive']);
+      addUtilities(arbitraryUtilities, ['responsive']);
     },
   ],
 };

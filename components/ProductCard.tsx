@@ -15,10 +15,9 @@ export default function ProductCard({
   return (
     <Link
       href={`/products/${product._id}`}
-      className='w-[220px] flex flex-col gap-2 bg-white p-5 rounded-lg'
+      className='w-[220px] flex flex-col gap-2 bg-white p-5 rounded-lg dark:text-gray-800'
     >
       <Image
-        // src={product?.media?.[0] || ''}
         src={product.media[0]}
         alt='product'
         width={250}

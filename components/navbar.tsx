@@ -53,7 +53,7 @@ export default function Navbar() {
                       stiffness: 380,
                       damping: 30,
                     }}
-                    className='absolute bg-white dark:bg-blue-kz rounded-full inset-0 -z-10 text-blue-kz'
+                    className='absolute bg-blue-200 dark:bg-blue-kz rounded-full inset-0 -z-10 text-blue-kz'
                   />
                 )}
               </Link>
