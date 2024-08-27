@@ -11,7 +11,6 @@ export default function Home() {
          <Collections />
          <About />
          <Contact />
-         {/* <ProductList /> */}
       </main>
    );
 }

@@ -16,8 +16,6 @@ export default function Cart() {
       0
    );
 
-   console.log(user);
-
    const totalRounded = parseFloat(total.toFixed(2));
 
    const customer = {
@@ -29,13 +27,16 @@ export default function Cart() {
    const handleCheckout = async () => {
       try {
          if (!user) router.push('/sign-in');
-         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/checkout`, {
-            method: 'POST',
-            body: JSON.stringify({
-               cartItems: cart.cartItems,
-               customer,
-            }),
-         });
+         const res = await fetch(
+            `${process.env.NEXT_PUBLIC_API_ADMIN_URL}/api/checkout`,
+            {
+               method: 'POST',
+               body: JSON.stringify({
+                  cartItems: cart.cartItems,
+                  customer,
+               }),
+            }
+         );
          const data = await res.json();
          window.location.href = data.url;
       } catch (error) {
