@@ -3,7 +3,6 @@ export const getCollections = async () => {
       `${process.env.NEXT_PUBLIC_API_ADMIN_URL}/api/collections`,
       {
          cache: 'no-store',
-         //  cache: 'force-cache'
          // next: { revalidate: 30 },
       }
    );
@@ -15,7 +14,6 @@ export const getCollectionDetails = async (collectionId: string) => {
       `${process.env.NEXT_PUBLIC_API_ADMIN_URL}/api/collections/${collectionId}`,
       {
          cache: 'no-store',
-         //  cache: 'force-cache'
          // next: { revalidate: 30 },
       }
    );
@@ -27,7 +25,6 @@ export const getProducts = async () => {
       `${process.env.NEXT_PUBLIC_API_ADMIN_URL}/api/products`,
       {
          cache: 'no-store',
-         //  cache: 'force-cache'
          // next: { revalidate: 30 },
       }
    );
@@ -39,7 +36,6 @@ export const getProductDetails = async (productId: string) => {
       `${process.env.NEXT_PUBLIC_API_ADMIN_URL}/api/products/${productId}`,
       {
          cache: 'no-store',
-         //  cache: 'force-cache'
          // next: { revalidate: 30 },
       }
    );
@@ -51,7 +47,6 @@ export const getSearchedProducts = async (query: string) => {
       `${process.env.NEXT_PUBLIC_API_ADMIN_URL}/api/search/${query}`,
       {
          cache: 'no-store',
-         //  cache: 'force-cache'
          // next: { revalidate: 30 },
       }
    );
@@ -64,7 +59,6 @@ export const getOrders = async (customerId: string) => {
       `${process.env.NEXT_PUBLIC_API_ADMIN_URL}/api/orders/customers/${customerId}`,
       {
          cache: 'no-store',
-         //  cache: 'force-cache'
          // next: { revalidate: 30 },
       }
    );
@@ -76,7 +70,6 @@ export const getRelatedProducts = async (productId: string) => {
       `${process.env.NEXT_PUBLIC_API_ADMIN_URL}/api/products/${productId}/related`,
       {
          cache: 'no-store',
-         //  cache: 'force-cache'
          // next: { revalidate: 500 },
       }
    );
