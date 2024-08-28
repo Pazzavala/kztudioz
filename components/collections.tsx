@@ -5,8 +5,6 @@ import Collection from './collection';
 import useSectionInView from '@/lib/hooks/useSectionInView';
 import { getCollections } from '@/lib/actions/actions';
 import { CollectionType } from '@/lib/types';
-import Image from 'next/image';
-import Link from 'next/link';
 
 export default async function Collections() {
    //    const { ref } = useSectionInView('Shop', 0.3);
