@@ -2,13 +2,15 @@ import About from '@/components/about';
 import Collections from '@/components/collections';
 import Contact from '@/components/contact';
 import Hero from '@/components/hero';
-import ProductList from '@/components/ProductList';
+import { getCollections } from '@/lib/actions/actions';
 
-export default function Home() {
+export default async function Home() {
+   const collections = await getCollections();
+
    return (
       <main className='flex flex-col items-center'>
-         <Hero />
-         <Collections />
+         <Hero collections={collections} />
+         <Collections collections={collections} />
          <About />
          <Contact />
       </main>

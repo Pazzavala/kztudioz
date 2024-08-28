@@ -9,10 +9,16 @@ import blueClown from '@/public/assets/images/clowns/blue_clown.png';
 import pinkClown from '@/public/assets/images/clowns/pink_clown.png';
 import useSectionInView from '@/lib/hooks/useSectionInView';
 import Link from 'next/link';
+import { CollectionType } from '@/lib/types';
 
-export default function Hero() {
+interface HeroProps {
+   collections: CollectionType[];
+}
+
+export default function Hero({ collections }: HeroProps) {
    const { ref } = useSectionInView('Home', 0.8);
-
+   const latestCollection = collections[0]; // in future might just pass latest collection
+   // TODO: get images from latest collection to display in HERO
    return (
       <section
          id='home'
@@ -40,10 +46,10 @@ export default function Hero() {
                </p>
                <div className='hidden md:flex gap-5'>
                   <Link
-                     href={'/#shop'}
+                     href={`/collections/${latestCollection._id}`}
                      className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full text-base font-medium bg-blue-kz text-white dark:bg-blue-500 shadow-lg hover:scale-110 transition-transform`}
                   >
-                     <p className='p-2 lg:p-3'>View Latest Collection</p>
+                     <p className='p-2 lg:p-3'>Shop Latest Collection</p>
                   </Link>
                   <Link
                      href={'/#shop'}
@@ -74,10 +80,10 @@ export default function Hero() {
             </div>
             <div className={`md:hidden flex gap-3 mt-6`}>
                <Link
-                  href={'/#shop'}
+                  href={`/collections/${latestCollection._id}`}
                   className='flex flex-center w-44 rounded-full text-sm bg-blue-kz dark:bg-blue-500 text-white shadow-lg'
                >
-                  <p className='p-2'>View Latest Collection</p>
+                  <p className='p-2'>Shop Latest Collection</p>
                </Link>
                <Link
                   href={'/#shop'}
