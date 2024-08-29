@@ -1,6 +1,5 @@
 'use client';
 import { motion } from 'framer-motion';
-import { IoCart } from 'react-icons/io5';
 import Image from 'next/image';
 import { UserButton, useUser } from '@clerk/nextjs';
 import logo from '@/public/assets/logo.png';
@@ -29,36 +28,31 @@ export default function Header() {
                   width={120}
                   quality={95}
                   priority={true}
-                  className='block fixed -ml-3 lg:ml-0 -top-2  lg:static w-[4.5rem] lg:w-36 drop-shadow-custom-md'
+                  className='block fixed -ml-3 lg:ml-0 -top-2 p-2 lg:static w-[4.5rem] lg:w-36 drop-shadow-custom-md'
                />
             </Link>
          </motion.div>
 
          <Navbar />
 
-         {/* Search Bar and cart */}
+         {/* Search Bar, cart, login */}
          <motion.div
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             className='relative flex gap-2 h-10 flex-center text-gray-500 dark:text-gray-100 sm:text-lg z-[999] md:-mt-3'
          >
-            {/* Search could do right 1/2 */}
             <SearchBar />
-
-            {/* Cart */}
             <CartButton />
-
-            {/* Menu */}
             <Menu />
 
             {user ? (
-               <div className='fixed top-[1.35rem] right-5  lg:static'>
+               <div className='hidden lg:block fixed top-[1.35rem] right-5 lg:static'>
                   <UserButton />
                </div>
             ) : (
                <Link
                   href={'/sign-in'}
-                  className='fixed top-5 right-5 lg:static flex flex-center h-9 p-2.5 rounded-full lg:bg-white dark:bg-opacity-10 lg:hover:bg-blue-kz lg:bg-opacity-50 lg:border border-opacity-40 lg:backdrop-blur-md text-[#5278C] hover:text-white transition'
+                  className='hidden fixed top-5 right-5 lg:static lg:flex flex-center h-9 p-2.5 rounded-full lg:bg-white dark:bg-opacity-10 lg:hover:bg-blue-kz lg:bg-opacity-50 lg:border border-opacity-40 lg:backdrop-blur-md text-[#5278C] hover:text-white transition'
                >
                   <FaUser size={15} className='' />
                </Link>

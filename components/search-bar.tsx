@@ -34,14 +34,14 @@ export default function SearchBar() {
    return (
       <div
          ref={inputRef}
-         className='fixed top-5 right-32 lg:relative lg:top-0 lg:right-0 flex items-center'
+         className='fixed top-5 right-[4.2rem] lg:relative lg:top-0 lg:right-0 flex items-center'
       >
          <input
             type='text'
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className={`transition-all duration-300 ease-in-out bg-white border border-gray-300 rounded-full pl-4 pr-10 py-2 focus:outline-none ${
-               isOpen ? 'sm:w-64 w-40' : 'w-0 opacity-0'
+               isOpen ? 'w-52 sm:w-64' : 'w-0 opacity-0'
             }`}
             placeholder='Search...'
             onKeyDown={(e) => e.key === 'Enter' && handleSearchSubmit()}
@@ -49,9 +49,9 @@ export default function SearchBar() {
          />
          <button
             onClick={() => setIsOpen(!isOpen)}
-            className='absolute right-0 p-2 m-1 lg:bg-white bg-transparent lg:border focus:border-none rounded-full focus:outline-none'
+            className='absolute right-0 p-2.5 m-[.2rem] lg:bg-gray-300/20 bg-transparent lg:border focus:border-none rounded-full focus:outline-none'
          >
-            <IoSearch className='text-lg text-gray-500' />
+            <IoSearch size={20} className='text-lg' />
          </button>
       </div>
    );

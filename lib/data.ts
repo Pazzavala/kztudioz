@@ -58,6 +58,7 @@ export const navLinks = [
    },
    {
       name: 'Shop',
+      // name: 'Collections',
       hash: '/#shop',
    },
    {
