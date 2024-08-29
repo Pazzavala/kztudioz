@@ -1,37 +1,58 @@
 'use client';
-import React, { useState } from 'react';
-import { IoSearch } from 'react-icons/io5';
+
+import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { IoSearch } from 'react-icons/io5';
 
 export default function SearchBar() {
    const router = useRouter();
-   const [searchQuery, setSearchQuery] = useState('');
+   const [searchQuery, setSearchQuery] = useState<string>('');
+   const [isOpen, setIsOpen] = useState<boolean>(false);
+   const inputRef = useRef<HTMLDivElement>(null);
 
-   // const handleSearchChange = (s: any) => {
-   //    setSearchQuery(s.target.value);
-   // };
+   const handleSearchSubmit = () => {
+      if (searchQuery.trim()) {
+         router.push(`/search/${searchQuery}`);
+         setIsOpen(false);
+         setSearchQuery('');
+      }
+   };
 
-   // const handleSearchSubmit = (s: any) => {
-   //    s.preventDefault();
-   // };
+   const handleClickOutside = (e: MouseEvent) => {
+      if (inputRef.current && !inputRef.current.contains(e.target as Node)) {
+         setIsOpen(false);
+      }
+   };
+
+   useEffect(() => {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+         document.removeEventListener('mousedown', handleClickOutside);
+      };
+   }, []);
+
    return (
-      <div className='fixed top-5 right-[8.5rem] lg:static flex items-center lg:shadow-lg shadow-black/10 rounded-full text-black dark:text-white'>
-         <form className='relative mx-auto w-max z-40'>
-            <input
-               value={searchQuery}
-               onChange={(e) => setSearchQuery(e.target.value)}
-               type='text'
-               placeholder='Search...'
-               className='relative h-12 w-12 rounded-full border bg-white pl-12 outline-none focus:w-full focus:cursor-text focus:border-blue-kz focus:pl-16 focus:pr-4 transition'
-            />
-            <button
-               disabled={searchQuery === ''}
-               onClick={() => router.push(`/search/${searchQuery}`)}
-               className='absolute inset-0 my-auto h-8 w-12 flex flex-center border-r border-transparent'
-            >
-               <IoSearch className='text-lg text-gray-500 ' />
-            </button>
-         </form>
+      <div
+         ref={inputRef}
+         className='fixed top-5 right-32 lg:relative lg:top-0 lg:right-0 flex items-center'
+      >
+         <input
+            type='text'
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className={`transition-all duration-300 ease-in-out bg-white border border-gray-300 rounded-full pl-4 pr-10 py-2 focus:outline-none ${
+               isOpen ? 'sm:w-64 w-40' : 'w-0 opacity-0'
+            }`}
+            placeholder='Search...'
+            onKeyDown={(e) => e.key === 'Enter' && handleSearchSubmit()}
+            onFocus={() => setIsOpen(true)}
+         />
+         <button
+            onClick={() => setIsOpen(!isOpen)}
+            className='absolute right-0 p-2 m-1 lg:bg-white bg-transparent lg:border focus:border-none rounded-full focus:outline-none'
+         >
+            <IoSearch className='text-lg text-gray-500' />
+         </button>
       </div>
    );
 }

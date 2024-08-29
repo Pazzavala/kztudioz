@@ -7,13 +7,12 @@ import logo from '@/public/assets/logo.png';
 import Navbar from './navbar';
 import { FaUser } from 'react-icons/fa';
 import Link from 'next/link';
-import useCart from '@/lib/hooks/useCart';
 import Menu from './menu';
 import SearchBar from './search-bar';
+import CartButton from './cart-button';
 
 export default function Header() {
    const { user } = useUser();
-   const cart = useCart();
 
    return (
       <header className='flex max-w-[87rem] w-full mx-auto px-4 justify-between items-center'>
@@ -41,21 +40,13 @@ export default function Header() {
          <motion.div
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className='relative md:flex gap-2 h-10 items-center text-gray-700 dark:text-gray-100 sm:text-lg z-[999] md:-mt-3'
+            className='relative flex gap-2 h-10 flex-center text-gray-500 dark:text-gray-100 sm:text-lg z-[999] md:-mt-3'
          >
             {/* Search could do right 1/2 */}
             <SearchBar />
 
             {/* Cart */}
-            <Link
-               href={'/cart'}
-               className='fixed top-5 right-24 lg:static flex gap-2 flex-center h-8 px-2 py-1 rounded-full lg:bg-gray-200 lg:dark:bg-white lg:dark:bg-opacity-10 lg:hover:bg-blue-kz lg:bg-opacity-50 lg:border border-gray-300 border-opacity-40 lg:backdrop-blur-md text-[#5278C] hover:text-white transition'
-            >
-               <IoCart size={20} className='text-lg' />
-               <p className='hidden xl:block text-base font-semibold'>
-                  Cart {cart.cartItems.length}
-               </p>
-            </Link>
+            <CartButton />
 
             {/* Menu */}
             <Menu />
@@ -67,7 +58,7 @@ export default function Header() {
             ) : (
                <Link
                   href={'/sign-in'}
-                  className='fixed top-5 right-5 lg:static flex flex-center h-8 px-2 py-2 rounded-full lg:bg-gray-200 dark:bg-white dark:bg-opacity-10 lg:hover:bg-blue-kz lg:bg-opacity-50 lg:border border-gray-300 border-opacity-40 lg:backdrop-blur-md text-[#5278C] hover:text-white transition'
+                  className='fixed top-5 right-5 lg:static flex flex-center h-9 p-2.5 rounded-full lg:bg-white dark:bg-opacity-10 lg:hover:bg-blue-kz lg:bg-opacity-50 lg:border border-opacity-40 lg:backdrop-blur-md text-[#5278C] hover:text-white transition'
                >
                   <FaUser size={15} className='' />
                </Link>
