@@ -1,4 +1,4 @@
-import ProductCard from '@/components/ProductCard';
+import ProductCard from '@/components/product-card';
 import { getCollectionDetails, getProductDetails } from '@/lib/actions/actions';
 import { ProductType } from '@/lib/types';
 import Image from 'next/image';

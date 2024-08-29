@@ -1,4 +1,4 @@
-import ProductCard from '@/components/ProductCard';
+import ProductCard from '@/components/product-card';
 import { getSearchedProducts } from '@/lib/actions/actions';
 import React from 'react';
 

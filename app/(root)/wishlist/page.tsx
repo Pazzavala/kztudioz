@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react';
 import { useUser } from '@clerk/nextjs';
 
-import Loader from '@/components/Loader';
-import ProductCard from '@/components/ProductCard';
+import Loader from '@/components/loader';
+import ProductCard from '@/components/product-card';
 import { getProductDetails } from '@/lib/actions/actions';
 import { ProductType, UserType } from '@/lib/types';
 

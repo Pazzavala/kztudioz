@@ -1,7 +1,7 @@
 import { getProducts } from '@/lib/actions/actions';
 import { ProductType } from '@/lib/types';
 import React from 'react';
-import ProductCard from './ProductCard';
+import ProductCard from './product-card';
 
 export default async function ProductList() {
    const products = await getProducts();
