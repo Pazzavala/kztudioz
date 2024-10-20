@@ -17,12 +17,13 @@ export default function Menu() {
          </button>
 
          {dropdownMenu && (
-            <div className='fixed top-14 right-3 flex flex-col gap-4 p-3 rounded-lg border bg-white dark:bg-surface-mixed-200 text-base-bold lg:hidden'>
+            <div className='fixed top-14 right-3 flex flex-col gap-4 p-3 rounded-lg border bg-white text-base-bold lg:hidden'>
                {navLinks.map((navLink, index) => (
                   <Link
                      key={index}
                      href={navLink.hash}
                      onClick={() => setDropdownMenu(!dropdownMenu)}
+                     className='hover:text-blue-kz'
                   >
                      {navLink.name}
                   </Link>
@@ -41,7 +42,9 @@ export default function Menu() {
                >
                   Orders
                </Link>
-               <Link href={'/sign-in'}>Sign In</Link>
+               <Link href={'/sign-in'} className='hover:text-blue-kz'>
+                  Sign In
+               </Link>
             </div>
          )}
       </div>

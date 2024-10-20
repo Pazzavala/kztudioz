@@ -50,7 +50,7 @@ export default function SearchBar() {
          />
          <button
             onClick={() => setIsOpen(!isOpen)}
-            className='absolute right-0 p-2.5 m-[.2rem] lg:bg-gray-300/20 bg-transparent lg:border focus:border-none rounded-full focus:outline-none'
+            className='absolute right-0 p-2.5 m-[.2rem] lg:bg-gray-300/20 hover:bg-gray-400/20 bg-transparent lg:border focus:border-none rounded-full focus:outline-none'
          >
             <IoSearch size={20} className='text-lg' />
          </button>
