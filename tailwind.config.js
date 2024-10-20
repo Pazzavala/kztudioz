@@ -2,13 +2,13 @@ const { nextui } = require('@nextui-org/theme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/(badge|button|card|ripple|spinner).js"
-  ],
+   content: [
+      './app/**/*.{js,ts,jsx,tsx,mdx}',
+      './pages/**/*.{js,ts,jsx,tsx,mdx}',
+      './components/**/*.{js,ts,jsx,tsx,mdx}',
+      './src/**/*.{js,ts,jsx,tsx,mdx}',
+      './node_modules/@nextui-org/theme/dist/components/(badge|button|card|ripple|spinner).js',
+   ],
    theme: {
       extend: {
          spacing: {
@@ -60,14 +60,14 @@ module.exports = {
          },
          fontSize: {
             'heading1-bold': [
-               '50px',
+               '80px',
                {
                   lineHeight: '100%',
                   fontWeight: '700',
                },
             ],
             'heading2-bold': [
-               '30px',
+               '50px',
                {
                   lineHeight: '100%',
                   fontWeight: '700',

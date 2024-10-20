@@ -16,15 +16,17 @@ export default async function CollectionDetails({
    return (
       <div className='max-w-7xl w-full mx-auto px-10 py-5 text-gray-700 dark:text-white'>
          <div className='flex flex-col flex-center gap-8'>
-            {' '}
+            {/* {' '}
             <Image
                src={collectionDetails.media[0]}
                width={1500}
                height={1000}
                alt={collectionDetails.title}
                className='w-full h-[400px] object-cover rounded-xl'
-            />
-            <p className='text-heading3-bold'>{collectionDetails.title}</p>
+            /> */}
+            <p className='font-sedgwick-ave-display text-heading1-bold'>
+               {collectionDetails.title}
+            </p>
             <p className='text-body-medium text-center leading-relaxed'>
                {collectionDetails.description}
             </p>
