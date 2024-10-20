@@ -10,6 +10,7 @@ export default function CartButton() {
    return (
       <Link
          href={'/cart'}
+         //
          className='fixed top-5 right-9 lg:static flex flex-center rounded-full lg:bg-gray-300/20 lg:dark:bg-opacity-10 lg:border transition'
       >
          <Badge

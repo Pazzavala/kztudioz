@@ -34,7 +34,8 @@ export default function SearchBar() {
    return (
       <div
          ref={inputRef}
-         className='fixed top-5 right-[4.2rem] lg:relative lg:top-0 lg:right-0 flex items-center'
+         //
+         className='fixed top-5 right-16 lg:relative lg:top-0 lg:-right-1 flex items-center'
       >
          <input
             type='text'

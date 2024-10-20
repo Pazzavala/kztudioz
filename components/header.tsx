@@ -9,12 +9,13 @@ import Link from 'next/link';
 import Menu from './menu';
 import SearchBar from './search-bar';
 import CartButton from './cart-button';
+import UserSigninButton from './UserSigninButton';
 
 export default function Header() {
    const { user } = useUser();
 
    return (
-      <header className='flex max-w-[87rem] w-full mx-auto px-4 justify-between items-center'>
+      <header className='flex max-w-[87rem] w-full mx-auto px-4 justify-between items-center mt-7 lg:-mt-2'>
          {/* Logo */}
          <motion.div
             initial={{ y: -100, opacity: 0 }}
@@ -39,7 +40,7 @@ export default function Header() {
          <motion.div
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className='relative flex gap-2 h-10 flex-center text-gray-500 dark:text-gray-100 sm:text-lg z-[999] md:-mt-3'
+            className='relative flex gap-4 h-10 flex-center text-gray-600 sm:text-lg z-[999]'
          >
             <SearchBar />
             <CartButton />
@@ -50,12 +51,7 @@ export default function Header() {
                   <UserButton />
                </div>
             ) : (
-               <Link
-                  href={'/sign-in'}
-                  className='hidden fixed top-5 right-5 lg:static lg:flex flex-center h-9 p-2.5 rounded-full lg:bg-white dark:bg-opacity-10 lg:hover:bg-blue-kz lg:bg-opacity-50 lg:border border-opacity-40 lg:backdrop-blur-md text-[#5278C] hover:text-white transition'
-               >
-                  <FaUser size={15} className='' />
-               </Link>
+               <UserSigninButton />
             )}
          </motion.div>
       </header>

@@ -10,6 +10,7 @@ export default function Menu() {
    const { user } = useUser();
 
    return (
+      //
       <div className='fixed top-5 right-8 lg:hidden flex items-center'>
          <button className='absolute mt-10 bg-transparent rounded-full focus:outline-none'>
             <IoMenu size={23} onClick={() => setDropdownMenu(!dropdownMenu)} />
