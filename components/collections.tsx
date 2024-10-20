@@ -10,7 +10,7 @@ interface CollectionProps {
 }
 
 export default function Collections({ collections }: CollectionProps) {
-   const { ref } = useSectionInView('Shop', 0.3);
+   const { ref } = useSectionInView('Shop', 0.1);
 
    return (
       <section
