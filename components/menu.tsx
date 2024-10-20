@@ -41,6 +41,7 @@ export default function Menu() {
                >
                   Orders
                </Link>
+               <Link href={'/sign-in'}>Sign In</Link>
             </div>
          )}
       </div>
