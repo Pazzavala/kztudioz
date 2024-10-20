@@ -28,7 +28,7 @@ export default function Hero({ collections }: HeroProps) {
          <div className='flex flex-col lg:flex-row gap-7 sm:gap-16 flex-center'>
             <div className='flex flex-col sm:gap-8 text-center justify-center '>
                <h1
-                  className={`font-sedgwick-ave-display text-blue-kz font-black text-5xl sm:text-[4.5rem] tracking-wide sm:mb-5 leading-snug dark:text-white dark:drop-shadow-custom-lg`}
+                  className={`font-sedgwick-ave-display text-white drop-shadow-custom-lg font-black text-5xl sm:text-[4.5rem] tracking-wide sm:mb-5 leading-snug`}
                >
                   New Sticker
                   <br />
@@ -44,19 +44,19 @@ export default function Hero({ collections }: HeroProps) {
                   of artistic clowns, perfect for adding a touch of color and fun to
                   any surface!
                </p>
-               <div className='hidden md:flex gap-5'>
+               <div className='hidden md:flex gap-5  text-xl font-bold font-sedgwick-ave-display tracking-wider'>
                   <Link
                      href={`/collections/${latestCollection._id}`}
-                     className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full text-base font-medium bg-blue-kz text-white dark:bg-blue-500 shadow-lg hover:scale-110 transition-transform`}
+                     className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full bg-blue-kz text-white dark:bg-blue-500 shadow-lg hover:scale-110 transition-transform`}
                   >
-                     <p className='p-2 lg:p-3'>Shop Latest Collection</p>
+                     <p className='p-2 lg:p-3'>Latest Collection</p>
                   </Link>
                   <Link
                      href={'/#shop'}
                      // border-blue-kz text-blue-kz
-                     className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full text-base font-medium border-[1px] bg-gray-50 dark:bg-blue-kz bg-opacity-30 dark:bg-opacity-20 border-blue-kz dark:border-blue-500 text-blue-kz dark:text-gray-100 shadow-lg hover:scale-110 transition-transform`}
+                     className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full border-[1px] bg-gray-50 dark:bg-blue-kz bg-opacity-30 dark:bg-opacity-20 border-blue-kz dark:border-blue-500 text-blue-kz dark:text-gray-100 shadow-lg hover:scale-110 transition-transform`}
                   >
-                     <p className='p-2 lg:p-3'>All Sticker Collections</p>
+                     <p className='p-2 lg:p-3'>Shop Stickers</p>
                   </Link>
                </div>
             </div>
@@ -78,18 +78,20 @@ export default function Hero({ collections }: HeroProps) {
                   className='w-1/4 object-contain blur-[1px]'
                />
             </div>
-            <div className={`md:hidden flex gap-3 mt-6`}>
+            <div
+               className={`md:hidden flex gap-3 mt-6 text-sm font-sedgwick-ave-display tracking-wider`}
+            >
                <Link
                   href={`/collections/${latestCollection._id}`}
-                  className='flex flex-center w-44 rounded-full text-sm bg-blue-kz dark:bg-blue-500 text-white shadow-lg'
+                  className='flex flex-center w-44 rounded-full bg-blue-kz dark:bg-blue-500 text-white shadow-lg'
                >
-                  <p className='p-2'>Shop Latest Collection</p>
+                  <p className='p-2'>Latest Collection</p>
                </Link>
                <Link
                   href={'/#shop'}
-                  className='flex flex-center w-44 rounded-full text-sm bg-opacity-30 dark:bg-opacity-20 dark:bg-blue-kz  border border-blue-kz dark:border-blue-500 text-blue-kz dark:text-white shadow-lg'
+                  className='flex flex-center w-44 rounded-full bg-opacity-30 dark:bg-opacity-20 dark:bg-blue-kz  border border-blue-kz dark:border-blue-500 text-blue-kz dark:text-white shadow-lg'
                >
-                  <p className='p-2'>All Sticker Collections</p>
+                  <p className='p-2'>Shop Stickers</p>
                </Link>
             </div>
          </div>
