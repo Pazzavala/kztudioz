@@ -3,6 +3,9 @@ import { ProductType, UserType } from '@/lib/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import HeartFavorite from './heart-favorite';
+import CircleBlob from './circle-blob';
+import Background from './background';
+import CardBackground from './card-background';
 
 interface productCardProps {
    product: ProductType;
@@ -15,8 +18,10 @@ export default function ProductCard({
    return (
       <Link
          href={`/products/${product._id}`}
-         className='w-[220px] flex flex-col gap-2 bg-white p-5 rounded-lg dark:text-gray-800'
+         className='w-[220px] flex flex-col gap-2 bg-white/95 p-5 rounded-lg dark:text-gray-800 drop-shadow-custom-lg'
       >
+         <CardBackground />
+
          <Image
             src={product.media[0]}
             alt='product'
