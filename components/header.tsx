@@ -15,7 +15,7 @@ export default function Header() {
    const { user } = useUser();
 
    return (
-      <header className='flex max-w-[87rem] w-full mx-auto px-4 justify-between items-center mt-7 lg:-mt-2'>
+      <header className='flex max-w-[112rem] w-full mx-auto px-4 justify-between items-center mt-7 lg:-mt-2'>
          {/* Logo */}
          <motion.div
             initial={{ y: -100, opacity: 0 }}
