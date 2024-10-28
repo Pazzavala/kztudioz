@@ -19,50 +19,50 @@ function getRandomColor() {
 export default function CardBackground() {
    return (
       <div className='absolute inset-0 -z-10 rounded-lg overflow-hidden'>
-         <div className='absolute top-32 w-full max-w-2xl -z-10'>
-            <CircleBlob
-               color1={getRandomColor()}
-               xPos='-left-4'
-               yPos='top-0'
-               xMdPos='md:-left-10'
-            />
-            <CircleBlob
-               color1={getRandomColor()}
-               xPos='right-16'
-               yPos='top-44'
-               xMdPos='md:-right-30'
-               delay='animation-delay-2000'
-            />
-            <CircleBlob
-               color1={getRandomColor()}
-               xPos='right-0'
-               yPos='top-8'
-               xMdPos='md:left-64'
-               delay='animation-delay-4000'
-            />
-         </div>
-         <div className='absolute top-80 right-0 w-full max-w-2xl -z-10'>
-            <CircleBlob
-               color1={getRandomColor()}
-               xPos='-left-4'
-               yPos='top-0'
-               xMdPos='md:-left-10'
-            />
-            <CircleBlob
-               color1={getRandomColor()}
-               xPos='right-16'
-               yPos='-top-40'
-               xMdPos='md:-right-30'
-               delay='animation-delay-2000'
-            />
-            <CircleBlob
-               color1={getRandomColor()}
-               xPos='right-0'
-               yPos='top-8'
-               xMdPos='md:left-64'
-               delay='animation-delay-4000'
-            />
-         </div>
+         {/* <div className='absolute top-32 w-full max-w-2xl -z-10'> */}
+         <CircleBlob
+            color1={getRandomColor()}
+            xPos='-left-4'
+            yPos='top-0'
+            xMdPos='md:-left-10'
+         />
+         <CircleBlob
+            color1={getRandomColor()}
+            xPos='right-16'
+            yPos='top-44'
+            xMdPos='md:-right-30'
+            delay='animation-delay-2000'
+         />
+         <CircleBlob
+            color1={getRandomColor()}
+            xPos='right-0'
+            yPos='top-8'
+            xMdPos='md:left-64'
+            delay='animation-delay-4000'
+         />
+         {/* </div> */}
+         {/* <div className='absolute top-80 right-0 w-full max-w-2xl -z-10'> */}
+         <CircleBlob
+            color1={getRandomColor()}
+            xPos='-left-4'
+            yPos='top-0'
+            xMdPos='md:-left-10'
+         />
+         <CircleBlob
+            color1={getRandomColor()}
+            xPos='right-16'
+            yPos='-top-40'
+            xMdPos='md:-right-30'
+            delay='animation-delay-2000'
+         />
+         <CircleBlob
+            color1={getRandomColor()}
+            xPos='right-0'
+            yPos='top-8'
+            xMdPos='md:left-64'
+            delay='animation-delay-4000'
+         />
+         {/* </div> */}
       </div>
    );
 }
