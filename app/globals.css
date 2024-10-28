@@ -5,67 +5,37 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-   /* orange blue to purple */
-   /* background-color: hsla(0, 100%, 50%, 1);
-   background-image: radial-gradient(
-         at 40% 20%,
-         hsla(28, 100%, 74%, 1) 0px,
-         transparent 50%
-      ),
-      radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
-      radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
-      radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
-      radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
-      radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%),
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 252 252' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.86' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); */
-
-   /* Blue orange to some */
+/* body {
    background-color: #ffcf99;
+   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 252 252' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='10.0' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+      radial-gradient(at 59% 67%, hsla(62, 85%, 69%, 1) 0px, transparent 50%),
+      radial-gradient(at 46% 93%, hsla(173, 81%, 67%, 1) 0px, transparent 50%),
+      radial-gradient(at 53% 99%, hsla(342, 95%, 71%, 1) 0px, transparent 50%),
+      radial-gradient(at 50% 7%, hsla(287, 84%, 79%, 1) 0px, transparent 50%),
+      radial-gradient(at 96% 86%, hsla(247, 87%, 70%, 1) 0px, transparent 50%),
+      radial-gradient(at 2% 13%, hsla(344, 83%, 61%, 1) 0px, transparent 50%),
+      radial-gradient(at 12% 93%, hsla(215, 82%, 73%, 1) 0px, transparent 50%);
+} */
+
+body {
+   background-color: #f6d2f9;
    background-image: radial-gradient(
          at 27% 72%,
          hsla(224, 97%, 63%, 1) 0px,
          transparent 50%
       ),
       radial-gradient(at 16% 41%, hsla(93, 62%, 77%, 1) 0px, transparent 50%),
-      radial-gradient(at 19% 6%, hsla(219, 93%, 69%, 1) 0px, transparent 50%),
-      /* radial-gradient(at 56% 90%, hsla(102, 90%, 78%, 1) 0px, transparent 50%), */
+      radial-gradient(at 19% 6%, rgb(90, 148, 255) 0px, transparent 50%),
+      /* radial-gradient(at 56% 90%, rgb(255, 255, 255) 0px, transparent 50%), */
          radial-gradient(at 3% 74%, hsla(169, 67%, 72%, 1) 0px, transparent 50%),
       radial-gradient(at 45% 20%, hsla(0, 80%, 79%, 1) 0px, transparent 50%),
-      radial-gradient(at 73% 51%, hsla(262, 79%, 63%, 1) 0px, transparent 50%),
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 252 252' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.86' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-
-   /* blue purple to yellow orange  */
-   /* background-color: #fc99ff;
-   background-image: radial-gradient(
-         at 18% 76%,
-         hsla(60, 94%, 75%, 1) 0px,
-         transparent 50%
-      ),
-      radial-gradient(at 14% 22%, hsla(185, 72%, 78%, 1) 0px, transparent 50%),
-      radial-gradient(at 43% 81%, hsla(330, 86%, 75%, 1) 0px, transparent 50%),
-      radial-gradient(at 56% 96%, hsla(40, 69%, 68%, 1) 0px, transparent 50%),
-      radial-gradient(at 95% 0%, hsla(234, 80%, 72%, 1) 0px, transparent 50%),
-      radial-gradient(at 23% 9%, hsla(194, 99%, 70%, 1) 0px, transparent 50%),
-      radial-gradient(at 23% 0%, hsla(123, 85%, 70%, 1) 0px, transparent 50%),
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 252 252' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.86' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); */
-
-   /* Light yellow to blue green */
-   /* background-color: #fc99ff;
-   background-image: radial-gradient(
-         at 28% 24%,
-         hsla(60, 94%, 75%, 1) 0px,
-         transparent 50%
-      ),
-      radial-gradient(at 68% 56%, hsla(185, 72%, 78%, 1) 0px, transparent 50%),
-      radial-gradient(at 45% 17%, hsla(330, 86%, 75%, 1) 0px, transparent 50%),
-      radial-gradient(at 70% 13%, hsla(40, 69%, 68%, 1) 0px, transparent 50%),
-      radial-gradient(at 95% 0%, hsla(234, 80%, 72%, 1) 0px, transparent 50%),
-      radial-gradient(at 22% 66%, hsla(194, 99%, 70%, 1) 0px, transparent 50%),
-      radial-gradient(at 45% 71%, hsla(123, 85%, 70%, 1) 0px, transparent 50%),
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 252 252' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.86' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); */
+      radial-gradient(at 73% 51%, hsla(262, 79%, 63%, 1) 0px, transparent 50%);
+   /* url("data:image/svg+xml,%3Csvg viewBox='0 0 252 252' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.86' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); */
 }
+
+/* url("data:image/svg+xml,%3Csvg viewBox='0 0 252 252' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='10.0' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") */
+
+/* url("data:image/svg+xml,%3Csvg viewBox='0 0 252 252' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.86' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") */
 
 /* For moving circles in background */
 @layer utilities {

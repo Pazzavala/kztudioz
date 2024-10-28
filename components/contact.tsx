@@ -21,10 +21,10 @@ export default function Contact() {
          className='w-[min(100%,40rem)] p-4 text-center'
       >
          {/* font-sedgwick-ave-display */}
-         <h1 className='text-blue-kz dark:text-blue-500 text-3xl sm:text-5xl font-bold mb-6'>
+         <h1 className='text-white dark:text-blue-500 text-3xl sm:text-5xl font-bold mb-6'>
             Contact Me
          </h1>
-         <p className='text-gray-700 dark:text-gray-100 text-base'>
+         <p className='text-gray-800  text-base'>
             Please contact me directly at{' '}
             <a href='mailto:kzztudioz@gmail.com' className='underline'>
                kzztudioz@gmail.com

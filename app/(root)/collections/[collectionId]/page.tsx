@@ -1,7 +1,6 @@
 import ProductCard from '@/components/product-card';
-import { getCollectionDetails, getProductDetails } from '@/lib/actions/actions';
+import { getCollectionDetails } from '@/lib/actions/actions';
 import { ProductType } from '@/lib/types';
-import Image from 'next/image';
 import React from 'react';
 
 export const dynamic = 'force-dynamic';
@@ -14,22 +13,17 @@ export default async function CollectionDetails({
    const collectionDetails = await getCollectionDetails(params.collectionId);
 
    return (
-      <div className='max-w-7xl w-full mx-auto px-10 py-5 text-gray-700 z-10'>
+      <div className='max-w-7xl w-full mx-auto px-10 py-5 text-white z-10'>
          <div className='flex flex-col flex-center gap-8'>
-            {/* {' '}
-            <Image
-               src={collectionDetails.media[0]}
-               width={1500}
-               height={1000}
-               alt={collectionDetails.title}
-               className='w-full h-[400px] object-cover rounded-xl'
-            /> */}
             <p className='font-sedgwick-ave-display text-heading1-bold'>
                {collectionDetails.title}
             </p>
-            <p className='text-body-medium text-center leading-relaxed'>
-               {collectionDetails.description}
-            </p>
+            <div className='p-4 bg-black/10'>
+               <p className='text-body-medium text-center leading-relaxed'>
+                  {collectionDetails.description}
+               </p>
+            </div>
+
             <div className='flex flex-wrap flex-center gap-16 mx-auto '>
                {collectionDetails.products.map((product: ProductType) => {
                   return <ProductCard key={product._id} product={product} />;
