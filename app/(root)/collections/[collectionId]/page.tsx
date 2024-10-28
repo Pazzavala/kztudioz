@@ -14,7 +14,7 @@ export default async function CollectionDetails({
    const collectionDetails = await getCollectionDetails(params.collectionId);
 
    return (
-      <div className='max-w-7xl w-full mx-auto px-10 py-5 text-gray-700 dark:text-white'>
+      <div className='max-w-7xl w-full mx-auto px-10 py-5 text-gray-700 z-10'>
          <div className='flex flex-col flex-center gap-8'>
             {/* {' '}
             <Image
