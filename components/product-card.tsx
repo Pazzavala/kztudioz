@@ -22,9 +22,6 @@ export default function ProductCard({
          {/* Container for background effects */}
          <div className='absolute inset-0 overflow-hidden'>
             {/* Animated circle */}
-            {/* <div className='absolute circle-wh-72 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-               <div className='w-full h-full bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000' />
-            </div> */}
             <CardBackground />
          </div>
 
