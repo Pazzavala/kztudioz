@@ -5,38 +5,49 @@ import Link from 'next/link';
 import HeartFavorite from './heart-favorite';
 import CardBackground from './card-background';
 
-interface productCardProps {
+interface ProductCardProps {
    product: ProductType;
    updateSignedInUser?: (updatedUser: UserType) => void;
 }
+
 export default function ProductCard({
    product,
    updateSignedInUser,
-}: productCardProps) {
+}: ProductCardProps) {
    return (
       <Link
          href={`/products/${product._id}`}
-         className='w-[220px] flex flex-col gap-2 bg-white/95 p-5 rounded-lg drop-shadow-custom-lg'
+         className='relative w-[220px] h-full flex flex-col gap-2 bg-white/95 p-5 rounded-lg drop-shadow-custom-lg overflow-hidden'
       >
-         <CardBackground />
-
-         <Image
-            src={product.media[0]}
-            alt='product'
-            width={250}
-            height={300}
-            className='h-[250px] rounded-lg object-contain bg-white'
-         />
-         <div>
-            <p className='text-white text-sm font-bold'>{product.title}</p>
+         {/* Container for background effects */}
+         <div className='absolute inset-0 overflow-hidden'>
+            {/* Animated circle */}
+            {/* <div className='absolute circle-wh-72 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+               <div className='w-full h-full bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000' />
+            </div> */}
+            <CardBackground />
          </div>
-         <div className='flex justify-between items-center'>
-            <p className='text-white text-sm-medium'>${product.price}</p>
-            <HeartFavorite
-               size={21}
-               product={product}
-               updateSignedInUser={updateSignedInUser}
+
+         {/* Content container with higher z-index */}
+         <div className='relative z-10 flex flex-col gap-2'>
+            <Image
+               src={product.media[0]}
+               alt='product'
+               width={250}
+               height={300}
+               className='h-[250px] rounded-lg object-contain bg-white'
             />
+            <div>
+               <p className='text-white text-sm font-bold'>{product.title}</p>
+            </div>
+            <div className='flex justify-between items-center'>
+               <p className='text-white text-sm-medium'>${product.price}</p>
+               <HeartFavorite
+                  size={21}
+                  product={product}
+                  updateSignedInUser={updateSignedInUser}
+               />
+            </div>
          </div>
       </Link>
    );
