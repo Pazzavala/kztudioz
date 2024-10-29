@@ -11,17 +11,17 @@ export default function Gallery({ productMedia }: GalleryProps) {
 
    return (
       //bg-gradient-to-br from-[#C6EFFF] to-[#D6D0FA]
-      <div className='flex flex-col gap-3 max-w-[500px]'>
-         <div className='bg-white px-2 rounded-xl'>
+      <div className='flex flex-col gap-3 max-w-3xl'>
+         <div className='bg-white px-2 rounded-xl flex flex-center'>
             <Image
                src={mainImage}
                alt='product'
                width={500}
                height={500}
-               className='w-[28rem] h-[28rem] my-10 rounded-lg drop-shadow-xl object-contain'
+               className='w-[28rem] h-[28rem] sm:h-144 my-10 rounded-lg drop-shadow-xl object-contain'
             />
          </div>
-         <div className='flex gap-2 overflow-auto tailwind-scrollbar-hide'>
+         <div className='flex  gap-2 overflow-auto tailwind-scrollbar-hide'>
             {productMedia.map((image, index) => (
                <Image
                   key={index}
@@ -30,7 +30,7 @@ export default function Gallery({ productMedia }: GalleryProps) {
                   width={200}
                   height={200}
                   onClick={() => setMainImage(image)}
-                  className={`w-28 h-28 rounded-lg object-cover cursor-pointer ${
+                  className={`w-28 h-28 rounded-lg bg-white object-cover cursor-pointer ${
                      mainImage === image ? 'border-2 border-primary-400' : ''
                   }`}
                />

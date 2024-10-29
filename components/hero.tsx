@@ -23,7 +23,7 @@ export default function Hero({ collections }: HeroProps) {
       <section
          id='home'
          ref={ref}
-         className='max-w-[130rem] w-full mx-auto mt-28 sm:pt-10 sm:mt-10 mb-16 sm:pb-56 p-4 scroll-mt-96'
+         className='max-w-[130rem] w-full mx-auto mt-28 p-4 mb-16 md:pt-20 md:m-4 lg:h-[80vh]  scroll-mt-96'
       >
          <div className='flex flex-col lg:flex-row gap-7 sm:gap-36 flex-center'>
             <div className='flex flex-col sm:gap-8 text-center justify-center '>

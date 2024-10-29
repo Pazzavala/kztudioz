@@ -19,7 +19,7 @@ function getRandomColor() {
 export default function CardBackground() {
    return (
       <div className='absolute inset-0 -z-10 rounded-lg overflow-hidden'>
-         <div className='absolute top-32 w-full max-w-2xl -z-10'>
+         <div className='absolute top-80 w-full max-w-2xl -z-10'>
             <CircleBlob
                color1={getRandomColor()}
                xPos='-left-4'

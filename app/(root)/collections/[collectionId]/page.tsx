@@ -13,13 +13,13 @@ export default async function CollectionDetails({
    const collectionDetails = await getCollectionDetails(params.collectionId);
 
    return (
-      <div className='max-w-7xl w-full mx-auto px-10 py-5 text-white z-10'>
+      <div className='max-w-[110rem] w-full mx-auto px-10 py-5 text-white z-10'>
          <div className='flex flex-col flex-center gap-8'>
-            <p className='font-sedgwick-ave-display text-heading1-bold'>
+            <p className='font-sedgwick-ave-display text-center text-heading1-bold'>
                {collectionDetails.title}
             </p>
-            <div className='p-4 bg-black/10'>
-               <p className='text-body-medium text-center leading-relaxed'>
+            <div className='p-4 bg-black/15 rounded-lg'>
+               <p className='text-sm sm:text-lg text-center leading-relaxed'>
                   {collectionDetails.description}
                </p>
             </div>

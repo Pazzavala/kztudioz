@@ -17,7 +17,7 @@ export default function ProductCard({
    return (
       <Link
          href={`/products/${product._id}`}
-         className='relative w-[220px] h-full flex flex-col gap-2 bg-white/95 p-5 rounded-lg drop-shadow-custom-lg overflow-hidden'
+         className='relative w-[280px] h-full flex flex-col gap-2 bg-white/95 p-5 rounded-lg drop-shadow-custom-lg overflow-hidden'
       >
          {/* Container for background effects */}
          <div className='absolute inset-0 overflow-hidden'>
@@ -32,13 +32,13 @@ export default function ProductCard({
                alt='product'
                width={250}
                height={300}
-               className='h-[250px] rounded-lg object-contain bg-white'
+               className='h-[340px] rounded-lg object-contain bg-white'
             />
             <div>
-               <p className='text-white text-sm font-bold'>{product.title}</p>
+               <p className='text-white text-xl font-semibold'>{product.title}</p>
             </div>
             <div className='flex justify-between items-center'>
-               <p className='text-white text-sm-medium'>${product.price}</p>
+               <p className='text-white text-base-medium'>${product.price}</p>
                <HeartFavorite
                   size={21}
                   product={product}
