@@ -23,9 +23,9 @@ export default function Hero({ collections }: HeroProps) {
       <section
          id='home'
          ref={ref}
-         className='max-w-7xl w-full mx-auto mt-28 sm:mt-10 mb-16 sm:my-24 p-4 scroll-mt-96'
+         className='max-w-[130rem] w-full mx-auto mt-28 sm:pt-10 sm:mt-10 mb-16 sm:pb-56 p-4 scroll-mt-96'
       >
-         <div className='flex flex-col lg:flex-row gap-7 sm:gap-16 flex-center'>
+         <div className='flex flex-col lg:flex-row gap-7 sm:gap-36 flex-center'>
             <div className='flex flex-col sm:gap-8 text-center justify-center '>
                <h1
                   className={`font-sedgwick-ave-display text-white drop-shadow-custom-lg font-black text-5xl sm:text-[4.5rem] tracking-wide sm:mb-5 leading-snug`}

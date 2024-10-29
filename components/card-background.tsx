@@ -2,13 +2,13 @@ import React from 'react';
 import CircleBlob from './circle-blob';
 
 const colors = [
-   'bg-indigo-400/60',
+   // 'bg-indigo-400/60',
    'bg-blue-300/60',
    'bg-pink-300/80',
    'bg-red-400/50',
-   'bg-yellow-300/60',
-   'bg-green-300/80',
-   'bg-purple-300/80',
+   // 'bg-yellow-300/60',
+   // 'bg-green-300/80',
+   // 'bg-purple-300/80',
    'bg-teal-300/80',
 ];
 
