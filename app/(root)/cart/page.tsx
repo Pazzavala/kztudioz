@@ -45,8 +45,8 @@ export default function Cart() {
    };
 
    return (
-      <div className='flex w-full justify-center gap-10 py-16 px-10 max-lg:flex-col'>
-         <div className='w-2/3 max-lg:w-full p-5 justify-center bg-white rounded-xl'>
+      <div className='max-w-[90rem] w-full mx-auto flex justify-center gap-10 py-16 px-10 max-lg:flex-col'>
+         <div className='w-2/3 max-lg:w-full sm:min-h-144 p-5 justify-center bg-white rounded-xl'>
             <p className='text-2xl font-bold'>Shopping Cart</p>
             <hr className='my-6' />
             {cart.cartItems.length === 0 ? (
