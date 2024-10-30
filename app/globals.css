@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 /* Option 1 */
-body {
+/* body {
    background-color: hsla(240, 100%, 84%, 1);
    background-image: radial-gradient(
          at 92% 5%,
@@ -19,22 +19,6 @@ body {
       radial-gradient(at 6% 16%, hsla(257, 94%, 83%, 1) 0px, transparent 50%),
       radial-gradient(at 55% 88%, hsla(286, 100%, 92%, 1) 0px, transparent 50%),
       radial-gradient(at 94% 93%, hsla(227, 100%, 89%, 1) 0px, transparent 50%);
-}
-
-/* Option 2 */
-/* body {
-   background-color: #ff99d8;
-   background-image: radial-gradient(
-         at 8% 63%,
-         hsla(299, 75%, 66%, 1) 0px,
-         transparent 50%
-      ),
-      radial-gradient(at 74% 62%, hsla(11, 96%, 67%, 1) 0px, transparent 50%),
-      radial-gradient(at 48% 51%, hsla(231, 95%, 66%, 1) 0px, transparent 50%),
-      radial-gradient(at 44% 3%, hsla(274, 77%, 79%, 1) 0px, transparent 50%),
-      radial-gradient(at 45% 74%, hsla(201, 70%, 69%, 1) 0px, transparent 50%),
-      radial-gradient(at 26% 21%, hsla(207, 84%, 70%, 1) 0px, transparent 50%),
-      radial-gradient(at 46% 5%, hsla(36, 79%, 78%, 1) 0px, transparent 50%);
 } */
 
 /* Option 3 & 4 */
@@ -53,6 +37,21 @@ body {
       radial-gradient(at 73% 51%, hsla(262, 79%, 63%, 1) 0px, transparent 50%);
    height: 100vh;
 } */
+
+body {
+   background-color: hsla(230, 0%, 100%, 1);
+   background-image: radial-gradient(
+         at 61% 22%,
+         hsla(174, 100%, 91%, 0.43) 0px,
+         transparent 50%
+      ),
+      radial-gradient(at 11% 7%, hsla(209, 95%, 70%, 1) 0px, transparent 50%),
+      radial-gradient(at 99% 1%, hsla(209, 100%, 60%, 1) 0px, transparent 50%),
+      radial-gradient(at 26% 61%, hsla(20, 100%, 93%, 1) 0px, transparent 50%),
+      radial-gradient(at 94% 97%, hsla(315, 100%, 89%, 1) 0px, transparent 50%),
+      radial-gradient(at 17% 89%, hsla(318, 100%, 89%, 1) 0px, transparent 50%),
+      radial-gradient(at 36% 36%, hsla(209, 94%, 70%, 1) 0px, transparent 50%);
+}
 
 /* Option 5 */
 /* body {
@@ -84,14 +83,4 @@ body {
    .animation-delay-4000 {
       animation-delay: 4s;
    }
-}
-
-.noise {
-   /* background-color: rgb(38, 13, 61); */
-   background-image: url(/assets/noise.png);
-}
-
-.noise1 {
-   /* background: rbg(219, 169, 255); */
-   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 252 252' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.86' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }

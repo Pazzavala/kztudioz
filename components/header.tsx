@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { UserButton, useUser } from '@clerk/nextjs';
 import logo from '@/public/assets/logo.png';
 import Navbar from './navbar';
-import { FaUser } from 'react-icons/fa';
 import Link from 'next/link';
 import Menu from './menu';
 import SearchBar from './search-bar';

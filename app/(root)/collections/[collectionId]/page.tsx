@@ -13,12 +13,12 @@ export default async function CollectionDetails({
    const collectionDetails = await getCollectionDetails(params.collectionId);
 
    return (
-      <div className='max-w-[110rem] w-full mx-auto px-10 py-5 text-white z-10'>
+      <div className='max-w-[110rem] w-full mx-auto px-10 py-5 lg:pt-0 lg:pb-10 z-10'>
          <div className='flex flex-col flex-center gap-8'>
-            <p className='font-sedgwick-ave-display text-center text-heading1-bold'>
+            <p className='font-sedgwick-ave-display text-white text-center text-heading1-bold'>
                {collectionDetails.title}
             </p>
-            <div className='p-4 bg-black/15 rounded-lg'>
+            <div className='p-4 bg-gray-50/20 text-gray-800 rounded-lg'>
                <p className='text-sm sm:text-lg text-center leading-relaxed'>
                   {collectionDetails.description}
                </p>

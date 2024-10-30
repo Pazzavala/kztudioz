@@ -17,7 +17,7 @@ export default function ProductCard({
    return (
       <Link
          href={`/products/${product._id}`}
-         className='relative w-[280px] h-full flex flex-col gap-2 bg-white/95 p-5 rounded-lg drop-shadow-custom-lg overflow-hidden'
+         className='relative lg:w-[280px] h-full flex flex-col gap-2 bg-white p-5 rounded-lg drop-shadow-custom-lg overflow-hidden'
       >
          {/* Container for background effects */}
          <div className='absolute inset-0 overflow-hidden'>

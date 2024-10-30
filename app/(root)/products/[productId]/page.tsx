@@ -12,13 +12,15 @@ const ProductDetails = async ({ params }: { params: { productId: string } }) => 
 
    return (
       <>
-         <div className='max-w-[80rem] w-full mx-auto flex justify-between items-start gap-16 py-10 px-5 max-md:flex-col max-md:items-center'>
+         <div className='max-w-[120rem] w-full mx-auto py-10 px-5 flex flex-col gap-10 2xl:gap-20 flex-center lg:items-start lg:flex-row'>
             <Gallery productMedia={productDetails.media} />
             <ProductInfo productInfo={productDetails} />
          </div>
 
          <div className='flex flex-col flex-center px-10 py-5 max-md:px-3'>
-            <p className='text-heading3-bold text-gray-800'>Related Products</p>
+            <p className='text-[2rem] text-heading3-bold text-gray-800'>
+               Related Products
+            </p>
             <div className='flex flex-wrap flex-center gap-16 mx-auto mt-8'>
                {relatedProducts?.map((product: ProductType) => (
                   <ProductCard key={product._id} product={product} />

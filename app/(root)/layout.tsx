@@ -3,10 +3,7 @@ import '../globals.css';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Background from '@/components/background';
-import ActiveSectionContextProvider from '@/context/active-section-context';
 import { Inter, Montserrat, Itim } from 'next/font/google';
-import { ClerkProvider } from '@clerk/nextjs';
-import ToasterProvider from '@/lib/providers/ToasterProvider';
 import Providers from '../providers';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
