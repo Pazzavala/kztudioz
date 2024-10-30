@@ -39,7 +39,7 @@ export default function Header() {
          <motion.div
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className='relative flex gap-4 h-10 flex-center text-gray-600 sm:text-lg z-[999]'
+            className='relative flex gap-4 h-10 flex-center  sm:text-lg z-[999]'
          >
             <SearchBar />
             <CartButton />

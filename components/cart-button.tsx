@@ -11,7 +11,7 @@ export default function CartButton() {
       <Link
          href={'/cart'}
          //
-         className='fixed top-5 right-9 lg:static flex flex-center rounded-full lg:bg-gray-300/20 hover:bg-gray-400/20 lg:border transition'
+         className='fixed top-5 right-9 lg:static flex flex-center rounded-full lg:bg-gray-50/50 hover:bg-gray-400/20 transition'
       >
          <Badge
             content={cart.cartItems.length}
@@ -20,7 +20,7 @@ export default function CartButton() {
             color='danger'
          >
             <Button radius='full' isIconOnly variant='light'>
-               <IoCart size={24} className='text-gray-600' />
+               <IoCart size={24} className='text-gray-700' />
                {/* <p className='hidden xl:block text-base font-semibold'>Cart</p> */}
             </Button>
          </Badge>
