@@ -9,16 +9,24 @@ import blueClown from '@/public/assets/images/clowns/blue_clown.png';
 import pinkClown from '@/public/assets/images/clowns/pink_clown.png';
 import useSectionInView from '@/lib/hooks/useSectionInView';
 import Link from 'next/link';
-import { CollectionType } from '@/lib/types';
+import { CollectionType, ProductType } from '@/lib/types';
+import { getCollectionDetails, getProducts } from '@/lib/actions/actions';
 
 interface HeroProps {
    collections: CollectionType[];
+   // collectionDetails: CollectionType;
 }
 
 export default function Hero({ collections }: HeroProps) {
    const { ref } = useSectionInView('Home', 0.8);
-   const latestCollection = collections[0]; // in future might just pass latest collection
-   // TODO: get images from latest collection to display in HERO
+   const stickerCollection = collections[0];
+   const latestCollectionName = collections[1]; // in future might just pass latest collection
+
+   // // TODO: get images from latest collection to display in HERO
+   // collectionDetails.products.map((product: ProductType) => {
+   //
+   // })
+
    return (
       <section
          id='home'
@@ -46,13 +54,13 @@ export default function Hero({ collections }: HeroProps) {
                </p>
                <div className='hidden md:flex gap-5  text-xl font-bold font-sedgwick-ave-display tracking-wider'>
                   <Link
-                     href={`/collections/${latestCollection._id}`}
+                     href={`/collections/${latestCollectionName._id}`}
                      className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full bg-blue-kz text-white dark:bg-blue-500 shadow-lg hover:scale-110 transition-transform`}
                   >
                      <p className='p-2 lg:p-3'>Latest Collection</p>
                   </Link>
                   <Link
-                     href={'/#shop'}
+                     href={`/collections/${stickerCollection._id}`}
                      // border-blue-kz text-blue-kz
                      className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full border-[1px] bg-gray-50 dark:bg-blue-kz bg-opacity-30 dark:bg-opacity-20 border-blue-kz dark:border-blue-500 text-blue-kz dark:text-gray-100 shadow-lg hover:scale-110 transition-transform`}
                   >
@@ -61,6 +69,11 @@ export default function Hero({ collections }: HeroProps) {
                </div>
             </div>
 
+            {/* {productsLatestCollection.map((product: ProductType) => (
+               <div className='flex max-w-[46.5rem] justify-center items-start'>
+                  <Image />
+               </div>
+            ))} */}
             <div className='flex max-w-[46.5rem] justify-center items-start'>
                <Image
                   src={blackClown}
@@ -82,7 +95,7 @@ export default function Hero({ collections }: HeroProps) {
                className={`md:hidden flex gap-3 mt-6 text-sm font-sedgwick-ave-display tracking-wider`}
             >
                <Link
-                  href={`/collections/${latestCollection._id}`}
+                  href={`/collections/${latestCollectionName._id}`}
                   className='flex flex-center w-44 rounded-full bg-blue-kz dark:bg-blue-500 text-white shadow-lg'
                >
                   <p className='p-2'>Latest Collection</p>
