@@ -62,7 +62,7 @@ HeartFavoriteProps) {
 
    return (
       <button onClick={handleLike}>
-         <IoHeart size={size} fill={`${isLiked ? 'red' : 'white'}`} />
+         <IoHeart size={size} fill={`${isLiked ? 'red' : 'gray'}`} />
       </button>
    );
 }
