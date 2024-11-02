@@ -6,8 +6,11 @@ type CollectionType = {
    _id: string;
    title: string;
    media: [string];
+   description: string;
    // products: ProductType[];
    products: number;
+   createdAt: Date;
+   updatedAt: Date;
 };
 
 type ProductType = {
