@@ -5,7 +5,6 @@ export const navLinks = [
    },
    {
       name: 'Shop',
-      // name: 'Collections',
       hash: '/#shop',
    },
    {
@@ -16,15 +15,6 @@ export const navLinks = [
       name: 'Contact',
       hash: '/#contact',
    },
-   // {
-   //    name: 'Wishlist',
-   //    // hash: user ? '/wishlist' : '/sign-in',
-   //    hash: '/wishlist',
-   // },
-   // {
-   //    name: 'Orders',
-   //    hash: '/orders',
-   // },
 ] as const;
 
 export const navLinksType = [

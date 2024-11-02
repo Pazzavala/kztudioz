@@ -9,23 +9,16 @@ import blueClown from '@/public/assets/images/clowns/blue_clown.png';
 import pinkClown from '@/public/assets/images/clowns/pink_clown.png';
 import useSectionInView from '@/lib/hooks/useSectionInView';
 import Link from 'next/link';
-import { CollectionType, ProductType } from '@/lib/types';
-import { getCollectionDetails, getProducts } from '@/lib/actions/actions';
+import { CollectionType } from '@/lib/types';
 
 interface HeroProps {
    collections: CollectionType[];
-   // collectionDetails: CollectionType;
 }
 
 export default function Hero({ collections }: HeroProps) {
    const { ref } = useSectionInView('Home', 0.8);
    const stickerCollection = collections[0];
    const latestCollectionName = collections[1]; // in future might just pass latest collection
-
-   // // TODO: get images from latest collection to display in HERO
-   // collectionDetails.products.map((product: ProductType) => {
-   //
-   // })
 
    return (
       <section
@@ -68,11 +61,6 @@ export default function Hero({ collections }: HeroProps) {
                </div>
             </div>
 
-            {/* {productsLatestCollection.map((product: ProductType) => (
-               <div className='flex max-w-[46.5rem] justify-center items-start'>
-                  <Image />
-               </div>
-            ))} */}
             <div className='flex max-w-[46.5rem] justify-center items-start'>
                <Image
                   src={blackClown}
@@ -110,3 +98,35 @@ export default function Hero({ collections }: HeroProps) {
       </section>
    );
 }
+
+// TODO: get images from latest collection to display in HERO
+//  {latestCollectionName.media.map((img: string) => (
+//    <Image
+//       src={img}
+//       alt={img}
+//       width={200}
+//       height={200}
+//       className='w-1/4 object-contain blur-[1px]'
+//    />
+// ))}
+// <Image
+//    src={latestCollectionName.media[1]}
+//    alt='Latest Collection Sticker 1'
+//    width={200}
+//    height={200}
+//    className='w-1/4 object-contain blur-[1px]'
+// />
+// <Image
+//    src={latestCollectionName.media[2]}
+//    alt='Latest Collection Sticker 2'
+//    width={200}
+//    height={200}
+//    className='w-1/2 mt-16 object-cover drop-shadow-custom-md'
+// />
+// <Image
+//    src={latestCollectionName.media[3]}
+//    alt='Latest Collection Sticker 3'
+//    width={100}
+//    height={100}
+//    className='w-1/4 object-contain blur-[1px]'
+// />

@@ -51,7 +51,7 @@ const Orders = async () => {
                                  <p className='text-small-medium'>
                                     Unit price:{' '}
                                     <span className='text-small-bold'>
-                                       {orderItem.product.price}
+                                       {orderItem.product.price.toFixed(2)}
                                     </span>
                                  </p>
                                  <p className='text-small-medium'>

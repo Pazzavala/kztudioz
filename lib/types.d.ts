@@ -25,10 +25,8 @@ type ProductType = {
    tags: [string];
    price: number;
    expense: number;
-   // createdAt: Date;
-   // updatedAt: Date;
-   createdAt: string;
-   updatedAt: string;
+   createdAt: Date;
+   updatedAt: Date;
 };
 
 type UserType = {

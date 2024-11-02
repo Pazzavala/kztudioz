@@ -38,7 +38,9 @@ export default function ProductCard({
                <p className='text-white text-xl font-semibold'>{product.title}</p>
             </div>
             <div className='flex justify-between items-center'>
-               <p className='text-white text-base-medium'>${product.price}</p>
+               <p className='text-white text-base-medium'>
+                  ${product.price.toFixed(2)}
+               </p>
                <HeartFavorite
                   size={21}
                   product={product}

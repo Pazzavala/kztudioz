@@ -21,7 +21,6 @@ export default function CartButton() {
          >
             <Button radius='full' isIconOnly variant='light'>
                <IoCart size={24} className='text-gray-700' />
-               {/* <p className='hidden xl:block text-base font-semibold'>Cart</p> */}
             </Button>
          </Badge>
       </Link>

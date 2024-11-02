@@ -20,7 +20,7 @@ export default function ProductInfo({ productInfo }: ProductInfoProps) {
             </h3>
             <HeartFavorite size={25} product={productInfo} baseColor='gray' />
          </div>
-         <p className='text-2xl font-bold'>$ {productInfo.price}</p>
+         <p className='text-2xl font-bold'>$ {productInfo.price.toFixed(2)}</p>
          <div className='flex flex-col gap-2'>
             <p className='text-2xl font-semibold text-blue-kz'>Description:</p>
             <p className='text-base md:text-xl font-medium'>

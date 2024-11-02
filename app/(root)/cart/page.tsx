@@ -16,8 +16,6 @@ export default function Cart() {
       0
    );
 
-   const totalRounded = parseFloat(total.toFixed(2));
-
    const customer = {
       clerkId: user?.user?.id,
       email: user?.user?.emailAddresses?.[0]?.emailAddress,
@@ -71,7 +69,7 @@ export default function Cart() {
                                  {cartItem.item.title}
                               </p>
                               <p className='text-base font-medium'>
-                                 $ {cartItem.item.price}
+                                 $ {cartItem.item.price.toFixed(2)}
                               </p>
                            </div>
                         </div>
@@ -111,7 +109,7 @@ export default function Cart() {
             </p>
             <div className='flex justify-between text-base font-semibold'>
                <span>Total Amount</span>
-               <span>${totalRounded}</span>
+               <span>${total.toFixed(2)}</span>
             </div>
             <button
                onClick={handleCheckout}
