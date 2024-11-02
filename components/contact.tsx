@@ -21,7 +21,7 @@ export default function Contact() {
          className='w-[min(100%,40rem)] p-4 text-center'
       >
          {/* font-sedgwick-ave-display */}
-         <h1 className='text-white dark:text-blue-500 text-3xl sm:text-5xl font-bold mb-6'>
+         <h1 className='text-white text-3xl sm:text-5xl font-bold mb-6'>
             Contact Me
          </h1>
          <p className='text-gray-800  text-base'>

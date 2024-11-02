@@ -11,7 +11,7 @@ export default function CartButton() {
       <Link
          href={'/cart'}
          //
-         className='fixed top-5 right-9 lg:static flex flex-center rounded-full lg:bg-gray-50/50 hover:bg-gray-400/20 transition'
+         className='fixed top-5 right-9 lg:static flex flex-center rounded-full lg:bg-gray-50/50 hover:bg-white/90 transition'
       >
          <Badge
             content={cart.cartItems.length}

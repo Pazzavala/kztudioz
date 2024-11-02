@@ -20,9 +20,7 @@ export default function About() {
             className='-mt-10 sm:mt-0 drop-shadow-custom  sm:w-[30rem]'
          />
          <div className='max-w-lg text-center sm:mr-20 '>
-            <h3
-               className={`mb-4 sm:mb-8 font-bold text-xl sm:text-3xl text-white dark:text-blue-500`}
-            >
+            <h3 className={`mb-4 sm:mb-8 font-bold text-xl sm:text-3xl text-white`}>
                Welcome to our Community!
             </h3>
             <p

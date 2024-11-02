@@ -8,11 +8,13 @@ import { IoHeart } from 'react-icons/io5';
 interface HeartFavoriteProps {
    size?: number;
    product: ProductType;
+   baseColor: string;
    updateSignedInUser?: (updatedUser: UserType) => void;
 }
 export default function HeartFavorite({
    size,
    product,
+   baseColor,
    updateSignedInUser,
 }: // size,
 HeartFavoriteProps) {
@@ -62,7 +64,7 @@ HeartFavoriteProps) {
 
    return (
       <button onClick={handleLike}>
-         <IoHeart size={size} fill={`${isLiked ? 'red' : 'gray'}`} />
+         <IoHeart size={size} fill={`${isLiked ? 'red' : baseColor}`} />
       </button>
    );
 }

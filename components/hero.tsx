@@ -40,13 +40,13 @@ export default function Hero({ collections }: HeroProps) {
                >
                   New Sticker
                   <br />
-                  <span className='sm:text-[6.5rem] tracking-widest text-blue-950 dark:text-blue-500'>
+                  <span className='sm:text-[6.5rem] tracking-widest text-blue-950'>
                      Drop!
                   </span>
                </h1>
 
                <p
-                  className={`hidden sm:block md:text-left ml-7 md:mb-16 max-w-96 text-gray-700 dark:text-white`}
+                  className={`hidden sm:block md:text-left ml-7 md:mb-16 max-w-96 text-gray-700`}
                >
                   Introducing our vibrant new sticker collection featuring a variety
                   of artistic clowns, perfect for adding a touch of color and fun to
@@ -55,14 +55,13 @@ export default function Hero({ collections }: HeroProps) {
                <div className='hidden md:flex gap-5  text-xl font-bold font-sedgwick-ave-display tracking-wider'>
                   <Link
                      href={`/collections/${latestCollectionName._id}`}
-                     className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full bg-blue-kz text-white dark:bg-blue-500 shadow-lg hover:scale-110 transition-transform`}
+                     className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full bg-blue-kz text-white shadow-lg hover:scale-110 transition-transform`}
                   >
                      <p className='p-2 lg:p-3'>Latest Collection</p>
                   </Link>
                   <Link
                      href={`/collections/${stickerCollection._id}`}
-                     // border-blue-kz text-blue-kz
-                     className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full border-[1px] bg-gray-50 dark:bg-blue-kz bg-opacity-30 dark:bg-opacity-20 border-blue-kz dark:border-blue-500 text-blue-kz dark:text-gray-100 shadow-lg hover:scale-110 transition-transform`}
+                     className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full lg:bg-gray-50/50 hover:bg-white/90 bg-transparent bg-opacity-30 text-blue-kz shadow-lg hover:scale-110 transition-transform`}
                   >
                      <p className='p-2 lg:p-3'>Shop Stickers</p>
                   </Link>
@@ -96,13 +95,13 @@ export default function Hero({ collections }: HeroProps) {
             >
                <Link
                   href={`/collections/${latestCollectionName._id}`}
-                  className='flex flex-center w-44 rounded-full bg-blue-kz dark:bg-blue-500 text-white shadow-lg'
+                  className='flex flex-center w-44 rounded-full bg-blue-kz text-white shadow-lg'
                >
                   <p className='p-2'>Latest Collection</p>
                </Link>
                <Link
                   href={'/#shop'}
-                  className='flex flex-center w-44 rounded-full bg-opacity-30 dark:bg-opacity-20 dark:bg-blue-kz  border border-blue-kz dark:border-blue-500 text-blue-kz dark:text-white shadow-lg'
+                  className='flex flex-center w-44 rounded-full bg-opacity-30 border border-blue-kz text-blue-kz shadow-lg'
                >
                   <p className='p-2'>Shop Stickers</p>
                </Link>

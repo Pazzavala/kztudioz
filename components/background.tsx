@@ -2,7 +2,7 @@ import React from 'react';
 import CircleBlob from './circle-blob';
 export default function Background() {
    return (
-      <div className='absolute inset-0 -z-10 overflow-hidden dark:bg-surface-mixed-100'>
+      <div className='absolute inset-0 -z-10 overflow-hidden'>
          <div className='absolute top-32 w-full max-w-2xl xl:ml-48 z-10'>
             <CircleBlob
                color1='bg-indigo-400/80'

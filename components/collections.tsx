@@ -16,7 +16,7 @@ export default function Collections({ collections }: CollectionProps) {
       <section
          ref={ref}
          id='shop'
-         className='flex w-full justify-center bg-gradient-to-br from-[#e2f8ff] to-[#fff2f6] dark:from-blue-800 dark:to-[#c2a6fa] scroll-mt-16 sm:scroll-mt-[0rem]'
+         className='flex w-full justify-center bg-gradient-to-br from-[#e2f8ff] to-[#fff2f6] scroll-mt-16 sm:scroll-mt-[0rem]'
       >
          <div className='max-w-7xl w-full sm:my-8 p-4 pb-8 scroll-mt-16 sm:scroll-mt-48'>
             <h2

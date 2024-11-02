@@ -26,9 +26,7 @@ export default function RootLayout({
          <head>
             <script src='http://localhost:8097' />
          </head>
-         <body
-            className={`${montserrat.className} relative text-gray-950 dark:text-white`}
-         >
+         <body className={`${montserrat.className} relative text-gray-950`}>
             <Providers>
                <Background />
                <Header />

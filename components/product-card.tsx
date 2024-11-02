@@ -42,6 +42,7 @@ export default function ProductCard({
                <HeartFavorite
                   size={21}
                   product={product}
+                  baseColor='white'
                   updateSignedInUser={updateSignedInUser}
                />
             </div>
