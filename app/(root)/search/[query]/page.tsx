@@ -8,8 +8,10 @@ export default async function SearchPage({ params }: { params: { query: string }
    const decodedQuery = decodeURIComponent(params.query);
 
    return (
-      <div className='px-10 py-5'>
-         <p className='text-heading3-bold my-10'>Search result for {decodedQuery}</p>
+      <div className='max-w-[90rem] w-full mx-auto px-10 py-5'>
+         <p className='font-sedgwick-ave-display text-[3rem] text-white mb-10 text-center'>
+            Search result for {decodedQuery}
+         </p>
          {!searchProducts ||
             (searchProducts.length === 0 && (
                <p className='text-body-bold my-5'>No results found</p>

@@ -29,6 +29,8 @@ export default function Wishlist() {
    useEffect(() => {
       if (user) {
          getUser();
+      } else {
+         setLoading(false);
       }
    }, [user]);
 
