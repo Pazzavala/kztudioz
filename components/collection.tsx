@@ -22,15 +22,15 @@ export default function Collection({
    return (
       <article className='group flex my-3 md:my-0 sm:h-[43rem] flex-col even:md:flex-row md:flex-row-reverse md:justify-between items-center md:items-start'>
          {/* Image */}
-         <div className='flex flex-col mx-6 w-80 sm:group-even:mx-0 sm:-mx-16 sm:w-1/2 h-96 sm:h-[40rem] flex-center sm:bg-none sm:border-none bg-gradient-to-br from-[#C6EFFF] to-[#D6D0FA] border border-black/5 rounded-xl transition'>
+         <div className='flex flex-col mx-6 w-80 sm:group-even:mx-0 sm:group-odd:item-start sm:-mx-16 sm:w-1/2 h-96 sm:h-[40rem] flex-center sm:bg-none sm:border-none bg-gradient-to-br from-[#C6EFFF] to-[#D6D0FA] border border-black/5 rounded-xl transition'>
             <Link href={`/collections/${_id}`} className='w-[220px] md:w-full'>
                <Image
                   src={media[0]}
                   alt={title}
-                  width={550}
-                  height={500}
+                  width={600}
+                  height={600}
                   sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                  className='object-contain flex justify-start rounded-xl drop-shadow-custom-lg p-4 sm:p-0 '
+                  className='object-contain flex justify-start rounded-xl drop-shadow-custom-lg p-4 sm:p-0 sm:group-odd:place-self-end'
                />
             </Link>
          </div>
