@@ -18,6 +18,7 @@ export default function Wishlist() {
    const getUser = async () => {
       try {
          const res = await fetch('/api/users');
+         console.log(res);
          const data = await res.json();
          setSignedInUser(data);
          setLoading(false);

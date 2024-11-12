@@ -7,7 +7,6 @@ import Image from 'next/image';
 const Orders = async () => {
    const { userId } = auth();
    const orders = await getOrders(userId as string);
-   console.log(orders[0].products);
 
    return (
       <div className='max-w-[90rem] w-full mx-auto p-3 mt-20 min-h-160 md:min-h-176'>
