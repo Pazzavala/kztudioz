@@ -54,7 +54,7 @@ export default function Hero({ collections }: HeroProps) {
                   </Link>
                   <Link
                      href={`/collections/${stickerCollection._id}`}
-                     className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full lg:bg-gray-50/50 hover:bg-white/90 bg-transparent bg-opacity-30 text-blue-kz shadow-lg hover:scale-110 transition-transform`}
+                     className={`cursor-pointer flex text-center flex-center w-full text-nowrap rounded-full lg:bg-white/80 hover:bg-white/90 bg-transparent bg-opacity-30 text-blue-kz shadow-lg hover:scale-110 transition-transform`}
                   >
                      <p className='p-2 lg:p-3'>Shop Stickers</p>
                   </Link>
@@ -89,7 +89,7 @@ export default function Hero({ collections }: HeroProps) {
                </Link>
                <Link
                   href={'/#shop'}
-                  className='flex flex-center w-44 rounded-full bg-opacity-30 border border-blue-kz text-blue-kz shadow-lg'
+                  className='flex flex-center w-44 rounded-full bg-opacity-30 bg-white/80 hover:bg-white/90 text-blue-kz shadow-lg'
                >
                   <p className='p-2'>Shop Stickers</p>
                </Link>
