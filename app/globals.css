@@ -51,6 +51,8 @@ body {
       radial-gradient(at 94% 97%, hsla(315, 100%, 89%, 1) 0px, transparent 50%),
       radial-gradient(at 17% 89%, hsla(318, 100%, 89%, 1) 0px, transparent 50%),
       radial-gradient(at 36% 36%, hsla(209, 94%, 70%, 1) 0px, transparent 50%);
+   /* height: 100%; */
+   min-height: 100vh;
 }
 
 /* Option 5 */

@@ -28,10 +28,12 @@ export default function RootLayout({
          </head>
          <body className={`${montserrat.className} relative text-gray-950`}>
             <Providers>
-               <Background />
-               <Header />
-               <div className='relative z-10'>{children}</div>
-               <Footer />
+               {/* <Background /> */}
+               <div className='flex flex-col min-h-screen'>
+                  <Header />
+                  <div className='flex-grow relative z-10'>{children}</div>
+                  <Footer />
+               </div>
             </Providers>
          </body>
       </html>

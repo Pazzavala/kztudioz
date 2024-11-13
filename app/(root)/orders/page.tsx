@@ -9,7 +9,7 @@ const Orders = async () => {
    const orders = await getOrders(userId as string);
 
    return (
-      <div className='max-w-[90rem] w-full mx-auto p-3 mt-20 min-h-160 md:min-h-176'>
+      <div className='max-w-[90rem] w-full mx-auto h-full p-3 mt-20 '>
          <div className='bg-white p-5 pt-2 rounded-xl'>
             <p className='text-heading3-bold my-10 text-center'>Your Orders</p>
             {!orders ||
