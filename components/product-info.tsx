@@ -15,7 +15,7 @@ export default function ProductInfo({ productInfo }: ProductInfoProps) {
    return (
       <div className='max-w-2xl text-xl w-full p-10 flex flex-col gap-10 bg-white text-gray-800 rounded-xl'>
          <div className='flex justify-between items-center'>
-            <h3 className='py-5 text-[2.9rem] font-bold font-sedgwick-ave-display text-blue-kz'>
+            <h3 className='text-[2.9rem] leading-normal font-bold font-sedgwick-ave-display text-blue-kz'>
                {productInfo.title}
             </h3>
             <HeartFavorite size={25} product={productInfo} baseColor='gray' />
