@@ -1,7 +1,8 @@
 # 📦 Kztudioz
-- View Website Here [Kztudioz](https://kztudioz.vercel.app/#home)
 
 ## 🌟 Overview
+
+Access the project at [Kztudioz](https://kztudioz.vercel.app/#home)
 
 Kztudioz is an e-commerce platform designed to provide a seamless online shopping experience. It integrates user authentication, secure payments, and a dynamic product catalog, making it easy for users to browse, purchase, and manage orders. The platform leverages modern web technologies to ensure fast performance and a responsive design.
 
